@@ -1,0 +1,244 @@
+/* 1. Your existing nav logo fix */
+header nav img {
+    max-height: 50px !important; 
+    width: auto !important;
+}
+
+/* 2. Your header cover height limit */
+header.cover {
+    min-height: 50vh !important; 
+    height: 50vh !important;
+}
+
+/* 3. REVISED: Fix the inner overlay without breaking the nav */
+header.cover .bg-black-60 {
+    height: 100% !important; 
+    padding-bottom: 0 !important; 
+    /* Removed the display: flex rules so the nav stays pinned to the top */
+}
+
+/* 4. NEW: Override Ananke's huge default title padding */
+header.cover .tc-l {
+    padding-top: 12vh !important; /* Adjust this value up or down to visually center your title */
+    padding-bottom: 0 !important; 
+}
+
+/* 5. Push the main content back down so it doesn't overlap */
+main > article {
+    margin-top: 0 !important; 
+    padding-top: 2rem !important; 
+}
+
+/* Make the navigation bar sticky at the top */
+nav[role="navigation"] {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    /* Adds a dark background so the menu remains readable over your page content */
+    background-color: rgba(0, 0, 0, 0.8) !important; 
+    padding-top: 0.3rem !important; 
+    padding-bottom: 0.3rem !important;
+}
+
+/* ============================================================
+   1. BASE STYLES (Works everywhere, including Firefox & Safari)
+   ============================================================ */
+
+.scroll-section {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 3rem 0;
+}
+
+.sticky-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bio-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+.profile-card figure {
+    margin: 0 auto;
+}
+
+.profile-card figure img {
+    width: 260px !important;
+    height: 260px !important;
+    aspect-ratio: 1 / 1 !important;
+    flex-shrink: 0;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #ccc;
+    padding: 6px;
+}
+
+.profile-card h2 {
+    font-size: 2rem !important;
+    white-space: nowrap;
+    margin-top: 0.5rem !important;
+}
+
+/* Bio is VISIBLE by default so Firefox users can read it */
+.bio-text {
+    opacity: 1;
+    font-size: 1.55rem;
+    line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+    .bio-layout {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profile-card {
+        flex: 0 0 360px;
+        text-align: center;
+    }
+
+    .bio-text {
+        flex: 1;
+    }
+}
+
+
+/* ============================================================
+   2. SCROLL ANIMATION (Only runs on Chrome & supported browsers)
+   ============================================================ */
+
+@supports (animation-timeline: view()) {
+
+    .scroll-section {
+        height: 280vh; /* Adds scroll room only if animations work */
+        padding: 0;
+    }
+
+    .sticky-wrapper {
+        position: sticky;
+        top: 6vh;
+        height: 80vh;
+    }
+
+    /* Hide bio initially ONLY if the browser knows how to animate it in */
+    .bio-text {
+        opacity: 0;
+    }
+
+    @media (min-width: 768px) {
+        .profile-card {
+            animation: centerToLeft linear both;
+            animation-timeline: view();
+            animation-range: entry 20% exit 80%;
+        }
+
+        .bio-text {
+            animation: revealBio linear both;
+            animation-timeline: view();
+            animation-range: entry 20% exit 80%;
+        }
+    }
+}
+
+
+/* ============================================================
+   3. ANIMATION KEYFRAMES
+   ============================================================ */
+
+@keyframes centerToLeft {
+    0%, 25% {
+        /* Calculates exact distance to center the card on any screen size */
+        transform: translateX(calc(min(45vw, 600px) - 180px));
+    }
+    70% {
+        /* Glides left into its natural left-column position */
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes revealBio {
+    0%, 55% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ============================================================
+   NEW COLORED SECTION STYLES
+   ============================================================ */
+
+/* 1. Full-Width Background Banner */
+.color-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%); /* Stretches edge-to-edge across the screen */
+    background-color: #1b2a4a;      /* Change this to your desired background color */
+    color: #ffffff;                 /* Text color inside the banner */
+    padding: 5rem 1.5rem;           /* Top/Bottom and Left/Right breathing room */
+    position: relative;
+    z-index: 2;                     /* Keeps it sitting cleanly above background tracks */
+}
+
+/* 2. Centered Content Container */
+.color-section-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 3. Typography Adjustments */
+.color-section-inner h2 {
+    font-size: 2.2rem !important;
+    color: #ffffff !important;      /* Heading color */
+    margin-bottom: 1.5rem;
+}
+
+.color-section-inner p,
+.color-section-inner li {
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+.color-section-inner ul {
+    list-style-type: none;          /* Removes default bullets if preferred */
+    padding: 0;
+}
+
+/* Remove default bottom gaps on Hugo layout containers */
+main, 
+article, 
+.nested-copy-line-height {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.colored-section {
+    margin-bottom: 0 !important;
+}
+
+/* Ensure footer sits directly beneath the colored section */
+footer {
+    margin-top: 0 !important;
+}

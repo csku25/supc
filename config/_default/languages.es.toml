@@ -1,0 +1,23 @@
+label = "Cambiar a Español"
+locale = "es-es"
+weight = 1
+title = "Spanish United Pentecostal Church"
+
+[params]
+  site_logo = "/img/Logo_SPA_clear.png"
+  ananke.custom_css = ["css/custom.css"]
+
+[[menus.main]]
+  name = "Ministerios"
+  pageRef = "/ministries"
+  weight = 10
+
+[[menus.main]]
+  name = "Dirección"
+  pageRef = "/location"
+  weight = 20
+
+[[menus.main]]
+  name = "Sobre Nosotros"
+  pageRef = "/about_us"
+  weight = 30
