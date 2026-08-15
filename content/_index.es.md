@@ -2,7 +2,12 @@
 title = "Spanish United Pentecostal Church"
 description = "Iglesia Hispana Pentecostal Unida"
 featured_image = "/img/church.png"
+hero_button_text = "Visitarnos"
+hero_button_link = "/location"
 +++
+<div class="scroll-arrow">
+    {{< figure src="/img/scroll_down.png" width="80" height="20">}}
+</div>
 
 <div class="scroll-section">
 <div class="sticky-wrapper">
@@ -24,10 +29,27 @@ Este es su biografía. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 <div class="color-section">
 <div class="color-section-inner">
 
-## Vengan y Acompañennos
-¡Les damos la bienvenida a alabar y aprender con nosotros!
-**Escuela Dominical/Evangelización:** Domingo - 2:00 PM
-**Estudio Biblico:** Martes - 7:00 PM
-**Servicio de Oración:** Jueves - 7:00 PM
+<div class="color-section-text-top">
+
+## **Vengan y Acompañenos**
+
+</div>
+
+### ¡Les damos la bienvenida para alabar y aprender con nosotros!
+
+<div class="service-time">
+    <span style="color:orange; font-weight: bold;">Sunday School/Evangelism:</span>
+    <span>Sunday - 2:00 PM</span>
+</div>
+
+<div class="service-time">
+    <span style="color:orange; font-weight: bold;">Bible Study:</span>
+    <span>Tuesday - 7:00 PM</span>
+</div>
+
+<div class="service-time">
+    <span style="color:orange; font-weight: bold;">Prayer Service:</span>
+    <span>Thursday - 7:00 PM</span>
+</div>
 </div>
 </div>

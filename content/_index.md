@@ -2,7 +2,12 @@
 title = "Spanish United Pentecostal Church"
 description = "‎" #invisible character
 featured_image = "/img/church.png"
+hero_button_text = "Visit Us"
+hero_button_link = "/location"
 +++
+<div class="scroll-arrow">
+    {{< figure src="/img/scroll_down.png" width="80" height="20">}}
+</div>
 
 <div class="scroll-section">
 <div class="sticky-wrapper">
@@ -23,10 +28,27 @@ This is his bio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 <div class="color-section">
 <div class="color-section-inner">
 
-## Come and Join Us
-We welcome you to worship and learn with us!
-**Sunday School/Evangelism:** Sunday - 2:00 PM
-**Bible Study:** Tuesday - 7:00 PM
-**Prayer Service:** Thursday - 7:00 PM
+<div class="color-section-text-top">
+
+## **Come and Join Us**
+
+</div>
+
+### We welcome you to worship and learn with us!
+
+<div class="service-time">
+    <span style="color:orange; font-weight: bold;">Sunday School/Evangelism:</span>
+    <span>Sunday - 2:00 PM</span>
+</div>
+
+<div class="service-time">
+    <span style="color:orange; font-weight: bold;">Bible Study:</span>
+    <span>Tuesday - 7:00 PM</span>
+</div>
+
+<div class="service-time">
+    <span style="color:orange; font-weight: bold;">Prayer Service:</span>
+    <span>Thursday - 7:00 PM</span>
+</div>
 </div>
 </div>

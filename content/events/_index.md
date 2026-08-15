@@ -1,4 +1,4 @@
 +++
-title = "Sobre Nosotros"
+title = "Events"
 featured_image = "/img/church.png"
 +++

@@ -1,5 +1,5 @@
 <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l center items-center justify-between">
+  <div class="nav-bar-inner items-center justify-between">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
       {{ with .Site.Params.site_logo }}
         <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
@@ -7,9 +7,23 @@
         {{ .Site.Title }}
       {{ end }}
     </a>
-    <div class="flex-l items-center">
+
+    <!-- Mobile language switcher: visible next to the hamburger -->
+    <div class="mobile-language-switcher">
+      {{ partials.Include "i18nlist.html" . }}
+    </div>
+
+    <!-- Hamburger toggle: pure CSS (checkbox hack), no JS required -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu" aria-controls="nav-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="nav-menu flex items-center" id="nav-menu">
       {{ if .Site.Menus.main }}
-        <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pr0 ml3" "pl0 mr3" }}">
+        <ul class="nav-list {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pr0 ml3" "pl0 mr3" }}">
           {{ range .Site.Menus.main }}
           <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.Direction "rtl") "pl3" "pr3" }}">
             <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
@@ -19,8 +33,14 @@
           {{ end }}
         </ul>
       {{ end }}
+
+      <!-- Desktop language switcher -->
       {{ partials.Include "i18nlist.html" . }}
+
       {{ partials.IncludeCached "social/follow.html" . }}
     </div>
+
+    <!-- Tapping the dimmed backdrop closes the mobile menu (same checkbox) -->
+    <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
   </div>
 </nav>

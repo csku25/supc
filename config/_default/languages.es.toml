@@ -5,7 +5,7 @@ title = "Spanish United Pentecostal Church"
 
 [params]
   site_logo = "/img/Logo_SPA_clear.png"
-  ananke.custom_css = ["css/custom.css"]
+  ananke.custom_css = ["css/index.css", "css/location.css", "css/nav.css", "css/index_mobile.css"]
 
 [[menus.main]]
   name = "Ministerios"
@@ -18,6 +18,11 @@ title = "Spanish United Pentecostal Church"
   weight = 20
 
 [[menus.main]]
+  name = "Eventos"
+  pageRef = "/events"
+  weight = 30
+
+[[menus.main]]
   name = "Sobre Nosotros"
   pageRef = "/about_us"
-  weight = 30
+  weight = 40

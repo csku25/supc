@@ -26,6 +26,18 @@
                 href="http://localhost:1313/categories/"
                 />
   </url><url>
+    <loc>http://localhost:1313/events/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/events/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/events/"
+                />
+  </url><url>
     <loc>http://localhost:1313/location/</loc>
     <xhtml:link
                 rel="alternate"

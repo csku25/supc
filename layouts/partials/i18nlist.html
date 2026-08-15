@@ -1,14 +1,14 @@
 {{ if .IsTranslated }}
-  <div class="dib v-mid">
+  <div class="i18n-switcher dib v-mid">
     {{ range .Translations }}
-      <a href="{{ .Permalink }}" class="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" title="{{ .Language.Label }}">
-        
+      <a href="{{ .Permalink }}" class="f6 fw4 hover-white no-underline white-70 pv2 ph3" title="{{ .Language.Label }}">
+
         {{ if eq .Lang "es" }}
           <img src="/img/eng.png" alt="Switch to English" style="height: 20px; width: auto; vertical-align: middle;">
-        
+
         {{ else if eq .Lang "en" }}
           <img src="/img/esp.png" alt="Cambiar a Español" style="height: 20px; width: auto; vertical-align: middle;">
-        
+
         {{ else }}
           {{ .Language.Label }}
         {{ end }}

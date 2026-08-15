@@ -1,13 +1,13 @@
-/* 1. Your existing nav logo fix */
+/* 1. Logo */
 header nav img {
     max-height: 50px !important; 
     width: auto !important;
 }
 
-/* 2. Your header cover height limit */
+/* 2. Banner/"Hero" */
 header.cover {
-    min-height: 50vh !important; 
-    height: 50vh !important;
+    min-height: 80vh !important;
+    height: 80vh !important;
 }
 
 /* 3. REVISED: Fix the inner overlay without breaking the nav */
@@ -19,7 +19,7 @@ header.cover .bg-black-60 {
 
 /* 4. NEW: Override Ananke's huge default title padding */
 header.cover .tc-l {
-    padding-top: 12vh !important; /* Adjust this value up or down to visually center your title */
+    padding-top: 25vh !important; /* Adjust this value up or down to visually center your title */
     padding-bottom: 0 !important; 
 }
 
@@ -39,6 +39,72 @@ nav[role="navigation"] {
     background-color: rgba(0, 0, 0, 0.8) !important; 
     padding-top: 0.3rem !important; 
     padding-bottom: 0.3rem !important;
+}
+
+header h1 { /* title */
+    /* Layer 1: A sharp, dark shadow for the 3D edge */
+    /* Layer 2: A slightly softer drop shadow */
+    /* Layer 3: A wide, blurry shadow for the floating effect */
+    text-shadow: 
+        2px 2px 0px rgba(0,0,0,0.8),
+        4px 4px 0px rgba(0,0,0,0.6),
+        8px 8px 15px rgba(0,0,0,0.5) !important;
+        
+    /* Optional: A slight scale-up to enhance the 3D feel */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+header h2 { /* subtitle */
+    /* Layer 1: A sharp, dark shadow for the 3D edge */
+    /* Layer 2: A slightly softer drop shadow */
+    /* Layer 3: A wide, blurry shadow for the floating effect */
+    text-shadow: 
+        1px 1px 0px rgba(0,0,0,0.8),
+        2px 2px 0px rgba(0,0,0,0.6),
+        4px 4px 8px rgba(0,0,0,0.5) !important;
+        
+    /* Optional: A slight scale-up to enhance the 3D feel */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+header .tc-l h2.homepage-only::after { 
+    content: "Reading, Pennsylvania";
+    display: block;
+    margin-top: 2rem;
+    color: #ffffffe8;
+    font-size: 2.5rem;
+    font-weight: 1000;
+    text-shadow: 
+        2px 2px 0px rgba(0,0,0,0.8),
+        4px 4px 0px rgba(0,0,0,0.6),
+        8px 8px 15px rgba(0,0,0,0.5) !important;
+        
+    /* Optional: A slight scale-up to enhance the 3D feel */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Hero Banner Button */
+.hero-button {
+    display: inline-block;
+    background-color: rgba(255, 174, 0, 0.5);
+    color: #ffffff;                 /* Dark blue text (match your theme) */
+    padding: 0.8rem 2.5rem;         /* Space inside the button */
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;            /* Gives it perfectly rounded pill edges */
+    transition: all 0.3s ease;      /* Smooth hover animation */
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+    background-color: rgba(255, 174, 0, 0.8);     /* Slightly darker white/gray on hover */
+    transform: translateY(-2px);    /* Lifts the button up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* ============================================================
@@ -194,9 +260,10 @@ nav[role="navigation"] {
 .color-section {
     width: 100vw;
     margin-left: calc(-50vw + 50%); /* Stretches edge-to-edge across the screen */
-    background-color: #1b2a4a;      /* Change this to your desired background color */
+    background-color: #1b2a4a; /* Fallback color */
+    background-image: url('/img/color_section_back.png');
     color: #ffffff;                 /* Text color inside the banner */
-    padding: 5rem 1.5rem;           /* Top/Bottom and Left/Right breathing room */
+    padding: 3rem 1.5rem;           /* Top/Bottom and Left/Right breathing room */
     position: relative;
     z-index: 2;                     /* Keeps it sitting cleanly above background tracks */
 }
@@ -210,14 +277,14 @@ nav[role="navigation"] {
 
 /* 3. Typography Adjustments */
 .color-section-inner h2 {
-    font-size: 2.2rem !important;
+    font-size: 3rem !important;
     color: #ffffff !important;      /* Heading color */
     margin-bottom: 1.5rem;
 }
 
 .color-section-inner p,
 .color-section-inner li {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.7;
 }
 
@@ -234,11 +301,40 @@ article,
     margin-bottom: 0 !important;
 }
 
-.colored-section {
+.color-section {
     margin-bottom: 0 !important;
+}
+
+.color-section-text-top { /* title */
+    /* Layer 1: A sharp, dark shadow for the 3D edge */
+    /* Layer 2: A slightly softer drop shadow */
+    /* Layer 3: A wide, blurry shadow for the floating effect */
+    text-shadow: 
+        2px 2px 0px rgb(255, 123, 0) !important;
+        
+    /* Optional: A slight scale-up to enhance the 3D feel */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 /* Ensure footer sits directly beneath the colored section */
 footer {
     margin-top: 0 !important;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.scroll-arrow {
+  animation: bounce 2s infinite;
+  opacity: 0.2;
 }
