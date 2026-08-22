@@ -35,18 +35,18 @@ Este es su biografía. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 ### ¡Les damos la bienvenida para alabar y aprender con nosotros!
 
 <div class="service-time">
-    <span style="color:orange; font-weight: bold;">Sunday School/Evangelism:</span>
-    <span>Sunday - 2:00 PM</span>
+    <span style="color:orange; font-weight: bold;">Escuela Dominical/Evangelismo:</span>
+    <span>Domingo - 2:00 PM</span>
 </div>
 
 <div class="service-time">
-    <span style="color:orange; font-weight: bold;">Bible Study:</span>
-    <span>Tuesday - 7:00 PM</span>
+    <span style="color:orange; font-weight: bold;">Estudio Bíblico:</span>
+    <span>Martes - 7:00 PM</span>
 </div>
 
 <div class="service-time">
-    <span style="color:orange; font-weight: bold;">Prayer Service:</span>
-    <span>Thursday - 7:00 PM</span>
+    <span style="color:orange; font-weight: bold;">Culto de Oración:</span>
+    <span>Jueves - 7:00 PM</span>
 </div>
 </div>
 </div>
