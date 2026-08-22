@@ -1,4 +1,4 @@
 +++
 title = "Children's Ministry"
-featured_image = "/img/church.png"
+featured_image = "/supc/img/church.png"
 +++
