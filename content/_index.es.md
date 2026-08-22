@@ -1,7 +1,7 @@
 +++
 title = "Spanish United Pentecostal Church"
 description = "Iglesia Hispana Pentecostal Unida"
-featured_image = "/supc/img/church.png"
+featured_image = "/img/church.png"
 hero_button_text = "Visitarnos"
 hero_button_link = "/location"
 +++
