@@ -5,9 +5,6 @@ featured_image = "/img/church.png"
 hero_button_text = "Ver en Google Maps"
 hero_button_link = "https://maps.app.goo.gl/pKf72LVrq7qx1Fr79"
 +++
-<div class="scroll-arrow">
-    {{< figure src="/img/scroll_down.png" width="80" height="20">}}
-</div>
 
 Bajando desde la intersección de la calle Spring y la calle 10
 

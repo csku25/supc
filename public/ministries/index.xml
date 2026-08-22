@@ -11,5 +11,33 @@
 		
 		
 			<atom:link href="http://localhost:1313/ministries/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Children&#39;s Ministry</title>
+				<link>http://localhost:1313/ministries/children/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/ministries/children/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>General Ministry</title>
+				<link>http://localhost:1313/ministries/general/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/ministries/general/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ladies&#39; Ministry</title>
+				<link>http://localhost:1313/ministries/ladies/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/ministries/ladies/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Men&#39;s Ministry</title>
+				<link>http://localhost:1313/ministries/mens/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/ministries/mens/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>

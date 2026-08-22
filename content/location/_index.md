@@ -5,9 +5,6 @@ featured_image = "/img/church.png"
 hero_button_text = "View in Google Maps"
 hero_button_link = "https://maps.app.goo.gl/pKf72LVrq7qx1Fr79"
 +++
-<div class="scroll-arrow">
-    {{< figure src="/img/scroll_down.png" width="80" height="20">}}
-</div>
 
 Down from the intersection of Spring Street & N10th Street
 

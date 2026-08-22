@@ -1,25 +1,40 @@
 {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+
 <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
   <div class="bg-black-60">
     {{ partial "site-navigation.html" . }}
+
     <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+
       <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
         {{ .Title | default .Site.Title }}
       </h1>
-      
+
       {{ with .Params.description }}
         <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3 {{ if $.IsHome }}homepage-only{{ end }}">
           {{ . | safeHTML }}
         </h2>
       {{ end }}
 
-      <!-- NEW BUTTON CODE -->
+      <!-- HERO BUTTON -->
       {{ if and .Params.hero_button_text .Params.hero_button_link }}
+
+        {{ $heroLink := .Params.hero_button_link }}
+
+        {{ if hasPrefix $heroLink "http://" }}
+          {{ $heroLink = $heroLink }}
+        {{ else if hasPrefix $heroLink "https://" }}
+          {{ $heroLink = $heroLink }}
+        {{ else }}
+          {{ $heroLink = $heroLink | relLangURL }}
+        {{ end }}
+
         <div class="tc mt4 mb3">
-          <a href="{{ .Params.hero_button_link }}" class="hero-button">
+          <a href="{{ $heroLink }}" class="hero-button">
             {{ .Params.hero_button_text }}
           </a>
         </div>
+
       {{ end }}
 
     </div>

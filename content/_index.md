@@ -5,9 +5,6 @@ featured_image = "/img/church.png"
 hero_button_text = "Visit Us"
 hero_button_link = "/location"
 +++
-<div class="scroll-arrow">
-    {{< figure src="/img/scroll_down.png" width="80" height="20">}}
-</div>
 
 <div class="scroll-section">
 <div class="sticky-wrapper">

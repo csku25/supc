@@ -5,7 +5,7 @@ title = "Spanish United Pentecostal Church"
 
 [params]
   site_logo = "/img/Logo_ENG_clear.png"
-  ananke.custom_css = ["css/index.css", "css/location.css", "css/nav.css", "css/index_mobile.css"]
+  ananke.custom_css = ["css/index.css", "css/nav.css", "css/index_mobile.css"]
 
 [[menus.main]]
   name = "Ministries"

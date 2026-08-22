@@ -26,6 +26,8 @@
                 href="http://localhost:1313/categories/"
                 />
   </url><url>
+    <loc>http://localhost:1313/ministries/children/</loc>
+  </url><url>
     <loc>http://localhost:1313/events/</loc>
     <xhtml:link
                 rel="alternate"
@@ -38,6 +40,10 @@
                 href="http://localhost:1313/events/"
                 />
   </url><url>
+    <loc>http://localhost:1313/ministries/general/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ministries/ladies/</loc>
+  </url><url>
     <loc>http://localhost:1313/location/</loc>
     <xhtml:link
                 rel="alternate"
@@ -49,6 +55,8 @@
                 hreflang="en-us"
                 href="http://localhost:1313/location/"
                 />
+  </url><url>
+    <loc>http://localhost:1313/ministries/mens/</loc>
   </url><url>
     <loc>http://localhost:1313/ministries/</loc>
     <xhtml:link

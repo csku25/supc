@@ -236,30 +236,17 @@ header .tc-l h2.homepage-only::after {
    10. DESKTOP HERO SCROLL ARROW
    ============================================================ */
 
-/*
-   Desktop only.
-
-   The scroll arrow is positioned at the bottom of the hero so
-   it is visible immediately when the homepage loads.
-
-   This does NOT affect mobile/tablet because the mobile.css
-   rules take over below 768px.
-*/
 @media (min-width: 768px) {
 
     /*
-       The scroll arrow is rendered AFTER the hero rather than
-       inside header.cover.
-
-       Pull it upward so it visually sits at the bottom of the
-       80vh desktop hero.
-
-       Mobile is intentionally unaffected.
+       Move the arrow visually without changing the document
+       flow. This prevents the bio section from being pulled
+       into the hero.
     */
     .scroll-arrow {
         position: relative !important;
 
-        margin-top: -12rem !important;
+        transform: translateY(-12rem) !important;
 
         z-index: 20 !important;
 
@@ -351,6 +338,14 @@ header .tc-l h2.homepage-only::after {
     line-height: 1.7;
 }
 
+
+/*
+   Desktop bio layout.
+
+   Align to the top rather than vertically centering. This is
+   important when the bio text becomes taller at narrower
+   desktop widths.
+*/
 @media (min-width: 768px) {
 
     .bio-layout {
@@ -358,7 +353,7 @@ header .tc-l h2.homepage-only::after {
 
         justify-content: space-between;
 
-        align-items: center;
+        align-items: flex-start;
     }
 
     .profile-card {
@@ -380,17 +375,28 @@ header .tc-l h2.homepage-only::after {
 @supports (animation-timeline: view()) {
 
     .scroll-section {
-        height: 280vh;
+        height: 300vh;
 
         padding: 0;
     }
 
+    /*
+       Allow the wrapper to grow with the bio instead of forcing
+       all desktop layouts into exactly 80vh.
+
+       At normal desktop widths this behaves like the original
+       80vh layout. At narrower desktop widths, additional
+       wrapped bio lines can increase the wrapper height without
+       being covered by the following color section.
+    */
     .sticky-wrapper {
         position: sticky;
 
         top: 6vh;
 
-        height: 80vh;
+        min-height: 80vh;
+
+        height: auto;
     }
 
     .bio-text {
@@ -551,18 +557,13 @@ article,
 
     justify-content: center;
 
-    gap: 0.5rem;
+    align-items: center;
 
-    margin: 0.5rem 0;
-}
+    gap: 0.75rem;
 
-@media (max-width: 600px) {
+    margin-top: 1rem;
 
-    .service-time {
-        flex-direction: column;
-
-        gap: 0;
-    }
+    margin-bottom: 1rem;
 }
 
 
@@ -622,13 +623,56 @@ footer > div {
 
     text-align: center;
 
-    animation: bounce 2s infinite;
+    opacity: 0.5 !important;
+}
 
-    opacity: 0.5;
+
+/*
+   The figure owns the bounce animation so it does not conflict
+   with the desktop positioning transform on .scroll-arrow.
+*/
+.scroll-arrow figure {
+    animation: bounce 2s infinite;
 }
 
 .scroll-arrow figure,
 .scroll-arrow img {
     margin-left: auto !important;
+
     margin-right: auto !important;
+}
+
+/* ============================================================
+   DESKTOP SCROLL ARROW
+   ============================================================ */
+
+/*
+   The arrow exists on every page so mobile can use it.
+
+   Desktop behavior:
+   - Homepage: visible
+   - All other pages: hidden
+*/
+@media (min-width: 768px) {
+
+    .scroll-arrow {
+        display: none !important;
+    }
+
+    body.is-home .scroll-arrow {
+        display: flex !important;
+
+        position: relative !important;
+
+        transform: translateY(-9.5rem) !important;
+
+        z-index: 20 !important;
+
+        pointer-events: none;
+    }
+
+    body.is-home .scroll-arrow figure,
+    body.is-home .scroll-arrow img {
+        pointer-events: auto;
+    }
 }
