@@ -3,7 +3,7 @@ title = "Spanish United Pentecostal Church"
 description = "Iglesia Hispana Pentecostal Unida"
 featured_image = "/img/church.png"
 hero_button_text = "Visitarnos"
-hero_button_link = "/location"
+hero_button_link = "location/"
 +++
 
 <div class="scroll-section">
