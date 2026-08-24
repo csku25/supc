@@ -331,7 +331,7 @@
     .scroll-arrow {
         position: relative !important;
 
-        transform: translateY(-9.5rem) !important;
+        transform: translateY(-6rem) !important;
 
         z-index: 20 !important;
 
