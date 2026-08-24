@@ -44,8 +44,8 @@ nav[role="navigation"] .nav-bar-inner {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 26px;
-    height: 18px;
+    width: 30px;
+    height: 22px;
     cursor: pointer;
     position: relative;
     z-index: 10001;
@@ -62,7 +62,7 @@ nav[role="navigation"] .nav-bar-inner {
 
 /* Animate the three lines into an "X" when the menu is open */
 .nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(1) {
-    transform: translateY(7.5px) rotate(45deg);
+    transform: translateY(9.5px) rotate(45deg);
 }
 
 .nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(2) {
@@ -70,7 +70,7 @@ nav[role="navigation"] .nav-bar-inner {
 }
 
 .nav-toggle-checkbox:checked ~ .nav-toggle-label span:nth-child(3) {
-    transform: translateY(-7.5px) rotate(-45deg);
+    transform: translateY(-9.5px) rotate(-45deg);
 }
 
 /* Visible focus ring when tabbing to the hamburger */
@@ -138,16 +138,6 @@ nav[role="navigation"] .nav-bar-inner {
         box-shadow: none !important;
         padding: 0 !important;
         transform: none !important;
-    }
-
-    .nav-list {
-        display: flex !important;
-        flex-direction: row !important;
-    }
-
-    .nav-list li {
-        border-bottom: none !important;
-        width: auto !important;
     }
 
     /* Mobile-only language switcher stays hidden */
@@ -242,13 +232,13 @@ nav[role="navigation"] .nav-bar-inner {
         top: 0;
         right: 0;
         height: 100vh;
-        width: 75vw;
-        max-width: 300px;
+        width: 78vw;
+        max-width: 330px;
         background-color: rgba(10, 10, 10, 0.97);
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 5rem 1.5rem 2rem;
+        padding: 5rem 1.75rem 2rem;
         transform: translateX(100%);
         transition: transform 0.3s ease;
         box-shadow: -6px 0 16px rgba(0, 0, 0, 0.5);
@@ -268,22 +258,23 @@ nav[role="navigation"] .nav-bar-inner {
         z-index: 9998;
     }
 
-    .nav-list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 0;
-    }
-
-    .nav-list li {
+    /*
+     * These target .nav-menu > li directly - the actual top-level menu
+     * items in the markup - not ".nav-list", which doesn't exist on
+     * anything in site-navigation.html and never matched. The child
+     * combinator (>) also keeps this from touching the nested <li>s
+     * inside .nav-dropdown-menu, which get their own sizing below.
+     */
+    .nav-menu > li {
         display: block !important;
         width: 100%;
-        padding: 0.85rem 0 !important;
+        padding: 1rem 0 !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
 
-    .nav-list li a {
-        font-size: 1.1rem;
+    .nav-menu > li > a {
+        font-size: 1.3rem;
+        font-weight: 600;
         display: block;
     }
 
@@ -298,16 +289,34 @@ nav[role="navigation"] .nav-bar-inner {
     }
 
     .nav-dropdown-summary {
-        padding: 0.85rem 0;
+        padding: 1rem 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    /* Bigger, easier-to-tap caret, and rotate it open like the
+       browser's native disclosure triangle would. */
+    .nav-dropdown-summary::after {
+        font-size: 0.85em;
+        transition: transform 0.2s ease;
+    }
+
+    .nav-dropdown[open] > .nav-dropdown-summary::after {
+        transform: rotate(180deg);
     }
 
     .nav-dropdown-menu {
-        padding-left: 1rem;
+        padding-left: 1.1rem;
         padding-bottom: 0.5rem;
+        margin-top: 0.25rem;
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .nav-dropdown-menu li a {
-        padding: 0.6rem 0;
-        font-size: 1rem;
+        padding: 0.75rem 0;
+        font-size: 1.15rem;
+        font-weight: 400;
+        display: block;
+        color: rgba(255, 255, 255, 0.75);
     }
 }
