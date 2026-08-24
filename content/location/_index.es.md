@@ -2,7 +2,7 @@
 title = "Dirección"
 description = "955 N 10th Street, Reading, PA 19604"
 featured_image = "/img/church.png"
-hero_button_text = "Ver en Google Maps"
+hero_button_text = "Ver en Maps"
 hero_button_link = "https://maps.app.goo.gl/pKf72LVrq7qx1Fr79"
 +++
 

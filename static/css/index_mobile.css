@@ -40,8 +40,22 @@
 
         /*
            Make the mobile hero fill the entire first screen.
+
+           100vh on mobile Safari is based on the LARGEST possible
+           viewport (toolbars hidden), not what's actually visible
+           when the address bar / bottom toolbar are showing. That
+           made content anchored near the bottom of the hero (like
+           the scroll arrow below) render below the visible area.
+
+           100svh (small viewport height) always assumes the
+           toolbar is visible, so it matches what's actually on
+           screen and - unlike 100dvh - never recalculates as the
+           toolbar animates, so there's no layout jump after load.
+           100vh is kept first as a fallback for browsers without
+           svh support.
         */
         min-height: 100vh !important;
+        min-height: 100svh !important;
 
         height: auto !important;
 
@@ -304,15 +318,20 @@
        The .scroll-arrow is rendered AFTER the hero by Hugo.
 
        Pull it upward so it visually sits at the bottom of the
-       100vh hero, just like the desktop version.
+       hero, just like the desktop version.
 
-       This is intentionally left unchanged so the arrow stays
-       exactly where it currently is.
+       IMPORTANT: use transform, not margin-top, to move it.
+       A negative margin-top doesn't just move this element - it
+       collapses flow space, which drags every element after it
+       (profile card, etc.) up the page too. transform is purely
+       visual and leaves the document flow (and everything below)
+       untouched. This mirrors the desktop rule further down,
+       which already uses transform for the same reason.
     */
     .scroll-arrow {
         position: relative !important;
 
-        margin-top: -5rem !important;
+        transform: translateY(-13rem) !important;
 
         z-index: 20 !important;
 
@@ -697,6 +716,7 @@
 
     header.cover {
         min-height: 100vh !important;
+        min-height: 100svh !important;
     }
 
     header.cover > .bg-black-60 {

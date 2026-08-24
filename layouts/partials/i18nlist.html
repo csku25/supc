@@ -4,10 +4,10 @@
       <a href="{{ .Permalink }}" class="f6 fw4 hover-white no-underline white-70 pv2 ph3" title="{{ .Language.Label }}">
 
         {{ if eq .Lang "es" }}
-          <img src="/supc/img/eng.png" alt="Switch to English" style="height: 20px; width: auto; vertical-align: middle;">
+          <img src='{{ urls.RelURL "img/eng.png" }}' alt="Switch to English" style="height: 20px; width: auto; vertical-align: middle;">
 
         {{ else if eq .Lang "en" }}
-          <img src="/supc/img/esp.png" alt="Cambiar a Español" style="height: 20px; width: auto; vertical-align: middle;">
+          <img src='{{ urls.RelURL "img/esp.png" }}' alt="Cambiar a Español" style="height: 20px; width: auto; vertical-align: middle;">
 
         {{ else }}
           {{ .Language.Label }}

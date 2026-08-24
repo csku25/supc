@@ -1,4 +1,3 @@
 +++
-title = "Ministerios"
-featured_image = "/img/church.png"
+title = "Ministerio General"
 +++

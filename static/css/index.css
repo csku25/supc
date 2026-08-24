@@ -129,6 +129,19 @@ nav[role="navigation"] {
 header h1 {
     font-size: clamp(2rem, 5vw, 4.5rem);
 
+    /*
+       The theme applies Tachyons' "fw2" class (font-weight: 200)
+       to this title. Desktop fallback fonts usually don't ship a
+       true ultra-light face, so browsers round that up to
+       something readable. Mobile Safari's system font (San
+       Francisco) DOES have a real 200-weight face, so it renders
+       exactly as thin as requested there, which looks broken.
+
+       Pin the weight explicitly instead of leaving it to
+       fallback-font luck, so it looks the same everywhere.
+    */
+    font-weight: 600 !important;
+
     text-shadow:
         2px 2px 0px rgba(0,0,0,0.8),
         4px 4px 0px rgba(0,0,0,0.6),
@@ -476,7 +489,7 @@ header .tc-l h2.homepage-only::after {
 
     background-color: #1b2a4a;
 
-    background-image: url('/supc/img/color_section_back.png');
+    background-image: url('../img/color_section_back.png');
 
     color: #ffffff;
 

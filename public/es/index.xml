@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Spanish United Pentecostal Church</title>
-		<link>http://localhost:1313/es/</link>
+		<link>//localhost:1313/es/</link>
 		<description>Recent content on Spanish United Pentecostal Church</description>
 		<generator>Hugo</generator>
 		<language>es-es</language>
@@ -10,6 +10,34 @@
 		
 		
 		
-			<atom:link href="http://localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="//localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ministerio de Las Damas</title>
+				<link>//localhost:1313/es/ministries/ladies/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>//localhost:1313/es/ministries/ladies/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ministerio de Los Caballeros</title>
+				<link>//localhost:1313/es/ministries/mens/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>//localhost:1313/es/ministries/mens/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ministerio de Los Jovenes y Jovenes Adultos</title>
+				<link>//localhost:1313/es/ministries/youth_hyphen/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>//localhost:1313/es/ministries/youth_hyphen/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ministerio de Los Ninos</title>
+				<link>//localhost:1313/es/ministries/children/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>//localhost:1313/es/ministries/children/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>

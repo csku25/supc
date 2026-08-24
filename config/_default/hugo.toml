@@ -1,4 +1,4 @@
-baseURL = "https://csku25.github.io/supc/"
+baseURL = "/"
 locale = 'es-es'
 title = 'SUPC'
 theme = 'ananke'

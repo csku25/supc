@@ -27,7 +27,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --baseURL "https://csku25.github.io/supc/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

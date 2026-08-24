@@ -4,25 +4,55 @@ weight = 2
 title = "Spanish United Pentecostal Church"
 
 [params]
-  site_logo = "/supc/img/Logo_ENG_clear.png"
+  site_logo = "img/Logo_ENG_clear.png"
   ananke.custom_css = ["css/index.css", "css/nav.css", "css/index_mobile.css"]
 
 [[menus.main]]
   name = "Ministries"
-  pageRef = "/ministries"
+  identifier = "ministries"
   weight = 10
 
 [[menus.main]]
+  name = "General"
+  parent = "ministries"
+  pageRef = "/ministries/"
+  weight = 20
+
+[[menus.main]]
+  name = "Children"
+  parent = "ministries"
+  pageRef = "/ministries/children/"
+  weight = 30
+
+[[menus.main]]
+  name = "Youth & Hyphen"
+  parent = "ministries"
+  pageRef = "/ministries/youth_hyphen/"
+  weight = 40
+
+[[menus.main]]
+  name = "Ladies"
+  parent = "ministries"
+  pageRef = "/ministries/ladies/"
+  weight = 50
+
+[[menus.main]]
+  name = "Men"
+  parent = "ministries"
+  pageRef = "/ministries/mens/"
+  weight = 60
+
+[[menus.main]]
   name = "Location"
-  pageRef = "/location"
+  pageRef = "/location/"
   weight = 20
 
 [[menus.main]]
   name = "Events"
-  pageRef = "/events"
+  pageRef = "/events/"
   weight = 30
 
 [[menus.main]]
   name = "About Us"
-  pageRef = "/about_us"
+  pageRef = "/about_us/"
   weight = 40
