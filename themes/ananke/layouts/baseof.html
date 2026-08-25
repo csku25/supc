@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.Locale }}" {{- if eq site.Language.Direction "rtl" }} dir="rtl" {{- end }}>
+<html lang='{{ site.Language.Locale }}' {{- if eq site.Language.Direction "rtl" }} dir="rtl" {{- end }}>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,16 +25,27 @@
 
     {{ partials.Include "site-style.html" . }}
     {{ if eq .Section "ministries" }}
-      <link rel="stylesheet" href='{{ "css/ministries.css" | relURL }}'>
+      <link rel="stylesheet" href='{{ "css/ministries/ministries.css" | relURL }}'>
+      {{ with .File }}
+        {{ if eq .ContentBaseName "mens" }}
+          <link rel="stylesheet" href='{{ "css/ministries/mens.css" | relURL }}'>
+        {{ else if eq .ContentBaseName "ladies" }}
+          <link rel="stylesheet" href='{{ "css/ministries/ladies.css" | relURL }}'>
+        {{ else if eq .ContentBaseName "children" }}
+          <link rel="stylesheet" href='{{ "css/ministries/children.css" | relURL }}'>
+        {{ else if eq .ContentBaseName "youth_hyphen" }}
+          <link rel="stylesheet" href='{{ "css/ministries/youth_hyphen.css" | relURL }}'>
+        {{ end }}
+      {{ end }}
     {{ end }}
     {{ if eq .Section "location" }}
-      <link rel="stylesheet" href='{{ "css/location.css" | relURL }}'>
+      <link rel="stylesheet" href='{{ "css/location/location.css" | relURL }}'>
     {{ end }}
     {{ if eq .Section "events" }}
-      <link rel="stylesheet" href='{{ "css/events.css" | relURL }}'>
+      <link rel="stylesheet" href='{{ "css/events/events.css" | relURL }}'>
     {{ end }}
     {{ if eq .Section "about_us" }}
-      <link rel="stylesheet" href='{{ "css/about_us.css" | relURL }}'>
+      <link rel="stylesheet" href='{{ "css/about_us/about_us.css" | relURL }}'>
     {{ end }}
     {{ partials.Include "site-scripts.html" . }}
 
@@ -90,7 +101,7 @@
     {{- end -}}
   {{- end -}}
 
-  <body class="{{ delimit $body_classes " " }}">
+  <body class='{{ delimit $body_classes " " }}'>
     {{- partials.Include "hook.html" (dict "hook" "body-start" "context" .) -}}
     {{- partials.Include "hook.html" (dict "hook" "header-before" "context" .) -}}
     {{ block "header" . }}{{ partials.Include "site-header.html" .}}{{ end }}

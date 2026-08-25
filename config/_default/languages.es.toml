@@ -8,51 +8,56 @@ title = "Spanish United Pentecostal Church"
   ananke.custom_css = ["css/index.css", "css/nav.css", "css/index_mobile.css"]
 
 [[menus.main]]
+  name = "Inicio"
+  pageRef = "/"
+  weight = 10
+
+[[menus.main]]
   name = "Ministerios"
   identifier = "ministries"
-  weight = 10
+  weight = 20
 
 [[menus.main]]
   name = "General"
   parent = "ministries"
   pageRef = "/ministries/"
-  weight = 20
+  weight = 30
 
 [[menus.main]]
   name = "Los Niños"
   parent = "ministries"
   pageRef = "/ministries/children/"
-  weight = 30
+  weight = 40
 
 [[menus.main]]
   name = "Los Jovenes y Jovenes Adultos"
   parent = "ministries"
   pageRef = "/ministries/youth_hyphen/"
-  weight = 40
+  weight = 50
 
 [[menus.main]]
   name = "Las Damas"
   parent = "ministries"
   pageRef = "/ministries/ladies/"
-  weight = 50
+  weight = 60
 
 [[menus.main]]
   name = "Los Caballeros"
   parent = "ministries"
   pageRef = "/ministries/mens/"
-  weight = 60
+  weight = 70
 
 [[menus.main]]
   name = "Dirección"
   pageRef = "/location/"
-  weight = 20
+  weight = 30
 
 [[menus.main]]
   name = "Eventos"
   pageRef = "/events/"
-  weight = 30
+  weight = 40
 
 [[menus.main]]
   name = "Sobre Nosotros"
   pageRef = "/about_us/"
-  weight = 40
+  weight = 50

@@ -1,69 +1,115 @@
+@media (min-width: 768px) {
+header nav img {
+    max-height: 50px !important;
+    width: auto !important;
+}
+
+
 /* ============================================================
-   LOCATION PAGE
+   2. HERO / BANNER
    ============================================================ */
+
+header.cover {
+    min-height: 40vh !important;
+    height: auto !important;
+
+    display: grid !important;
+
+    position: relative !important;
+
+    box-sizing: border-box;
+}
+
 
 /*
-   Everything in this stylesheet is limited to the Location
-   section.
-
-   This means the existing HTML classes do not need to be
-   renamed or duplicated just to make the styles page-specific.
+   The dark overlay occupies the entire hero.
 */
+header.cover > .bg-black-60 {
+    grid-area: 1 / 1;
 
+    width: 100% !important;
 
-/* ============================================================
-   HERO BANNER BUTTON
-   ============================================================ */
+    min-height: 100% !important;
+    height: auto !important;
 
-body.section-location .map-button {
-    display: inline-block;
+    box-sizing: border-box;
 
-    background-color: rgba(255, 174, 0, 0.5);
-
-    color: #ffffff;
-
-    padding: 0.8rem 2.5rem;
-
-    font-size: 1.25rem;
-
-    font-weight: 600;
-
-    text-decoration: none;
-
-    border-radius: 50px;
-
-    transition: all 0.3s ease;
-
-    margin-top: 1rem;
-
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex !important;
+    flex-direction: column !important;
 }
 
-body.section-location .map-button:hover {
-    background-color: rgba(255, 174, 0, 0.8);
 
-    transform: translateY(-2px);
-
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+/*
+   Keep the navigation and hero content above the overlay.
+*/
+header.cover > .bg-black-60 > * {
+    position: relative;
 }
 
 
 /* ============================================================
-   MAP
+   3. HERO CONTENT
    ============================================================ */
 
-body.section-location .map-container {
-    width: 100%;
+header.cover .tc {
+    width: 100% !important;
 
-    margin: 2rem 0;
+    box-sizing: border-box;
+
+    padding: 2rem 1rem !important;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
-body.section-location .map-container iframe {
-    display: block;
+header.cover .tc,
+header.cover .tc-l {
+    text-align: center !important;
+}
+
+header.cover .tc h1,
+header.cover .tc h2,
+header.cover .tc-l h1,
+header.cover .tc-l h2 {
+    text-align: center !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* ============================================================
+   4. MAIN CONTENT
+   ============================================================ */
+
+main > article {
+    margin-top: 0 !important;
+
+    padding-top: 2rem !important;
+}
+
+
+/* ============================================================
+   5. FIXED NAVIGATION
+   ============================================================ */
+
+nav[role="navigation"] {
+    position: fixed !important;
+
+    top: 0;
 
     width: 100%;
 
-    height: 500px;
+    z-index: 9999;
 
-    border: 0;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+}
 }
