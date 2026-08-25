@@ -113,3 +113,39 @@ nav[role="navigation"] {
     padding-bottom: 0.3rem !important;
 }
 }
+
+
+/* ============================================================
+   6. HERO TITLE FONT
+   ============================================================ */
+
+/*
+   The theme renders this page's hero title as a <div>, not an
+   <h1>/<h2> (see themes/ananke/layouts/_partials/page-header.html),
+   so it never picked up the sitewide "header h1" title styling
+   from css/index.css. Target it directly so it matches the
+   homepage hero: avenir, bold weight, drop shadow.
+
+   Intentionally placed outside the 768px media query above so it
+   also applies on mobile.
+*/
+header.cover div.f2.fw2.lh-title {
+    font-family: 'avenir next', avenir, sans-serif;
+
+    font-size: clamp(2rem, 5vw, 4.5rem);
+
+    font-weight: 600 !important;
+
+    text-shadow:
+        2px 2px 0px rgba(0,0,0,0.8),
+        4px 4px 0px rgba(0,0,0,0.6),
+        8px 8px 15px rgba(0,0,0,0.5) !important;
+
+    transition: transform 0.3s ease;
+
+    max-width: 900px;
+
+    width: 100%;
+
+    margin-inline: auto;
+}
