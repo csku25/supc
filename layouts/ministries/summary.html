@@ -1,0 +1,41 @@
+{{/*
+  Override of themes/ananke/layouts/summary.html, scoped to the "ministries"
+  section only. This is the template used for each box on the General
+  Ministry list page (Children's / Youth & Hyphen / Ladies' / Men's).
+
+  Changes from the theme default:
+    1. The <span class="f6 db">{{ .CurrentSection.Title }}</span> line has
+       been removed, so each box no longer shows "General Ministry" above
+       its title.
+    2. A thumbnail of the page's featured_image (front matter) is now shown
+       at the top of the box, using the theme's own
+       func/GetFeaturedImage.html partial (same lookup theme pages already
+       use: front-matter featured_image, then images[], then a "cover"
+       page resource). If a page has no featured image, no thumbnail is
+       rendered and the box looks exactly as before.
+*/}}
+{{ $show_date := partials.Include "func/ShowDate.html" . }}
+{{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
+<div class="w-100 mb4 nested-copy-line-height relative bg-white">
+  {{ if $featured_image }}
+    <a href="{{ .RelPermalink }}" class="db">
+      <img src="{{ $featured_image }}" class="db w-100" style="height:200px;object-fit:cover;" alt="{{ .Title }}">
+    </a>
+  {{ end }}
+  <div class="mb3 pa4 gray overflow-hidden bg-white">
+    {{ if $show_date }}
+      <time class="f6 db" {{ fmt.Printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safe.HTMLAttr }}>
+        {{- .Date | time.Format (compare.Default "January 2, 2006" .Site.Params.date_format) -}}
+      </time>
+    {{ end }}
+    <h1 class="f3 near-black">
+      <a href="{{ .RelPermalink }}" class="link black dim">
+        {{ .Title }}
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      {{ .Summary }}
+    </div>
+    <a href="{{.RelPermalink}}" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">{{ $.Param "read_more_copy" | compare.Default (lang.Translate "readMore") }}</a>
+  </div>
+</div>
