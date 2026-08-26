@@ -4,8 +4,8 @@ featured_image = "/img/ladies_banner.png"
 heading = "‎"
 +++
 
-Reunión de Damas
-El último sábado de cada mes
+### Reunión de Damas
+Fecha: El último sábado de cada mes
 Hora: 11:00AM
 
-Dirigido por: Hermana Lorena Chevez
+Lorena Chevez

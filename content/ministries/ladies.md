@@ -4,8 +4,8 @@ featured_image = "/img/ladies_banner.png"
 heading = "‎"
 +++
 
-Ladies' Monthly Meeting
-Last Saturday of every month
+### Ladies' Monthly Meeting
+Date: Last Saturday of every month
 Time: 11:00AM
 
-Led by: Sister Lorena Chevez
+Lorena Chevez

@@ -113,3 +113,20 @@ nav[role="navigation"] {
     padding-bottom: 0.3rem !important;
 }
 }
+
+
+/* ============================================================
+   6. MOBILE HERO DESCRIPTION
+   < 768px
+
+   The hero subtitle ("955 N 10th Street...") uses the fw1
+   (font-weight: 100) utility class, which reads as too thin on
+   small screens. Bump it up slightly for legibility without
+   touching size or color.
+   ============================================================ */
+
+@media (max-width: 767px) {
+    header.cover .tc-l h2 {
+        font-weight: 300 !important;
+    }
+}

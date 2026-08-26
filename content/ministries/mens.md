@@ -4,8 +4,8 @@ featured_image = "/img/mens_banner.png"
 heading = "‎"
 +++
 
-Monthly Men's Meeting
+### Men's Monthly Meeting
 Date: TBD
 Time: 7:00PM
 
-Led by: Brother Luis A. Gonzalez
+Luis A. Gonzalez
