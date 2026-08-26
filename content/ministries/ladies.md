@@ -8,4 +8,4 @@ heading = "‎"
 Date: Last Saturday of every month
 Time: 11:00AM
 
-Lorena Chevez
+Ladies' Director: Lorena Chevez

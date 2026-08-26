@@ -26,3 +26,6 @@ Pastor Ismael Mena
 Hermano Alfonso Osorio
 Hermano Luis A. Gonzalez
 Hermano Carlos A. Vega
+
+## Asociación
+Estámos asociados del [Distrito Pennsilvania UPCI](https://padistrictupci.org/) bajo el Sección 1.

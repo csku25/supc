@@ -26,3 +26,6 @@ Pastor Ismael Mena
 Brother Alfonso Osorio
 Brother Luis A. Gonzalez
 Brother Carlos A. Vega
+
+## Association
+We are associated with [Pennsylvania District UPCI](https://padistrictupci.org/) under Section 1.

@@ -3,4 +3,10 @@ title = "General Ministry"
 featured_image = "/img/church.png"
 +++
 
-Insert Text Here
+#### We do bilingual worship and sermons simultaneously in both English and Spanish, not separated.
+
+**Sunday:** Begins with Sunday School for children, youth, and young single adults and a teaching session for all other adults during the first hour. We then move into a more upbeat time of worship, followed by a message for all focused on evangelism.
+
+**Tuesday:** Dedicated to Bible study, where we take a deeper look into Scripture and explore the message God has for us.
+
+**Thursday:** Sets aside an hour for prayer, covering everything from personal prayer requests and needs to current events and situations happening around the world.

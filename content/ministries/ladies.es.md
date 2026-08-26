@@ -8,4 +8,4 @@ heading = "‎"
 Fecha: El último sábado de cada mes
 Hora: 11:00AM
 
-Lorena Chevez
+Directora de Damas: Lorena Chevez

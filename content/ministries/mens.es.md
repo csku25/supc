@@ -8,4 +8,4 @@ heading = "‎"
 Fecha: Por determinar
 Hora: 7:00PM
 
-Luis A. Gonzalez
+Director de Caballeros: Luis A. Gonzalez

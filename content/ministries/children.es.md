@@ -4,4 +4,4 @@ featured_image = "/img/children_banner.png"
 heading = "‎"
 +++
 
-Líderes de Escuela Dominical: Alfonso & Linda Osorio
+Directores de Escuela Dominical: Alfonso & Linda Osorio

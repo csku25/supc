@@ -4,4 +4,4 @@ featured_image = "/img/youth_hyphen_banner.png"
 heading = "‎"
 +++
 
-Kiana Vega
+Youth/Hyphen Director: Kiana Vega

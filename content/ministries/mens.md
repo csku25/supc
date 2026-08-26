@@ -8,4 +8,4 @@ heading = "‎"
 Date: TBD
 Time: 7:00PM
 
-Luis A. Gonzalez
+Men's Director: Luis A. Gonzalez
