@@ -1,0 +1,6 @@
+{{ with .Site.Params.facebook_url }}
+  <a href="{{ . }}" target="_blank" rel="noopener" class="facebook-icon-link dib v-mid"
+     title="Follow us on Facebook" aria-label="Follow us on Facebook - Opens in a new window">
+    <img src='{{ urls.RelURL "img/facebook.png" }}' alt="Facebook" class="facebook-icon-img">
+  </a>
+{{ end }}

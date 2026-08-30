@@ -6,3 +6,6 @@ theme = 'ananke'
 [markup.goldmark.renderer]
 unsafe = true
 hardWraps = true
+
+[params]
+facebook_url = "https://www.facebook.com/supcreading/"

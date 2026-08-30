@@ -9,7 +9,7 @@
     </a>
 
     <!-- Mobile language switcher: visible next to the hamburger -->
-    <div class="mobile-language-switcher">
+    <div class="mobile-language-switcher flex items-center">
       {{ partials.Include "i18nlist.html" . }}
     </div>
 
@@ -48,6 +48,7 @@
       {{ end }}
 
       <!-- Desktop language switcher -->
+      {{ partials.Include "facebook-icon.html" . }}
       {{ partials.Include "i18nlist.html" . }}
 
       {{ partials.IncludeCached "social/follow.html" . }}

@@ -29,6 +29,21 @@ nav[role="navigation"] .nav-bar-inner {
     padding-right: 0.5rem;
 }
 
+/* ---------- Facebook icon (circular, matches the flag icons) ---------- */
+
+.facebook-icon-link {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.facebook-icon-img {
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
 /* ---------- Hamburger button ---------- */
 
 /* The checkbox itself is invisible but stays keyboard-focusable */
@@ -215,8 +230,10 @@ nav[role="navigation"] .nav-bar-inner {
     }
 
     /*
-     * Hide the normal language switcher inside the slide-out menu.
-     * The visible copy is the one beside the hamburger.
+     * Hide the language switcher inside the slide-out menu - the visible
+     * copy is the one beside the hamburger. The Facebook icon is NOT
+     * hidden here; on mobile it moves into the drawer instead (styled
+     * below) and appears at the very bottom, under the page links.
      */
     .nav-menu .i18n-switcher {
         display: none;
@@ -276,6 +293,24 @@ nav[role="navigation"] .nav-bar-inner {
         font-size: 1.3rem;
         font-weight: 600;
         display: block;
+    }
+
+    /* Facebook icon inside the slide-out menu: sits at the very bottom,
+       below the page links, set off with a divider and sized for touch. */
+    .nav-menu > .facebook-icon-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-menu > .facebook-icon-link .facebook-icon-img {
+        height: 36px !important;
+        width: 36px !important;
     }
 
     /* Social icons inside the mobile menu */
