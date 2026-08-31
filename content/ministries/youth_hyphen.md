@@ -1,6 +1,6 @@
 +++
 title = "Youth & Hyphen Ministry"
-featured_image = "/img/youth_hyphen_banner.png"
+featured_image = "/img/banners/youth_hyphen_banner.png"
 heading = "‎"
 +++
 

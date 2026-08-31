@@ -1,6 +1,6 @@
 +++
 title = "General Ministry"
-featured_image = "/img/church.png"
+featured_image = "/img/banners/church.png"
 +++
 
 #### We do bilingual worship and sermons simultaneously in both English and Spanish, not separated.

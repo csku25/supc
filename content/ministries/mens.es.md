@@ -1,6 +1,6 @@
 +++
 title = "Ministerio de Los Caballeros"
-featured_image = "/img/mens_banner.png"
+featured_image = "/img/banners/mens_banner.png"
 heading = "‎"
 +++
 

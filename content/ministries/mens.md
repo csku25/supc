@@ -1,6 +1,6 @@
 +++
 title = "Men's Ministry"
-featured_image = "/img/mens_banner.png"
+featured_image = "/img/banners/mens_banner.png"
 heading = "‎"
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "Ministerio de Los Jovenes y Jovenes Adultos"
-featured_image = "/img/youth_hyphen_banner.png"
+featured_image = "/img/banners/youth_hyphen_banner.png"
 heading = "‎"
 +++
 

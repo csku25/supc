@@ -1,7 +1,7 @@
 +++
 title = "Spanish United Pentecostal Church"
 description = "‎" #invisible character
-featured_image = "/img/church.png"
+featured_image = "/img/banners/church.png"
 hero_button_text = "Visit Us"
 hero_button_link = "location/"
 +++

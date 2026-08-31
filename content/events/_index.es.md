@@ -1,4 +1,4 @@
 +++
 title = "Eventos"
-featured_image = "/img/church.png"
+featured_image = "/img/banners/church.png"
 +++
