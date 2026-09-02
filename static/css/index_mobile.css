@@ -157,7 +157,7 @@
     header.cover h1 {
         width: 100% !important;
 
-        max-width: 100% !important;
+        max-width: 34rem !important;
 
         margin-top: 0 !important;
 
@@ -708,9 +708,35 @@
 
 
 /* ============================================================
-   5. VERY SMALL PHONES
-   <= 420px
-   ============================================================ */
+    5. TABLET / SMALL DESKTOP HERO TITLES
+    768px - 959px
+    ============================================================ */
+
+@media (min-width: 768px) and (max-width: 959px) {
+
+    header.cover h1,
+    header.cover div.f2.fw2.lh-title {
+        font-size: clamp(2.75rem, 6vw, 4rem) !important;
+
+        transform: translateY(2rem) !important;
+    }
+
+    header.cover h2 {
+        position: relative;
+
+        top: 2rem;
+    }
+
+    header.cover h1 {
+        max-width: 34rem;
+    }
+}
+
+
+/* ============================================================
+    6. VERY SMALL PHONES
+    <= 420px
+    ============================================================ */
 
 @media (max-width: 420px) {
 
