@@ -36,7 +36,7 @@ Creemos que todos necesitan arrepentirse, lo que significa alejarse del pecado y
 Pedro les dijo: Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados; y recibiréis el don del Espíritu Santo.
 {{< /scripture >}}
 
-Dios ha dado a cada creyente dones y talentos del Espíritu para usar para Su propósito como liderazgo, sanidad, discernimiento, hablar en lenguas, interpretación, y la profecía.Cada don es diferente, pero cada persona y cada don es importante, que somos más fuertes cuando usamos nuestros dones juntos para servir a Dios y a los demás.{{< scripture icon="6" num="6" verse="1 Corintios 12:11||1 Pedro 4:10||Romanos 12:4-5" >}}
+Dios ha dado a cada creyente dones y talentos del Espíritu para usar para Su propósito como liderazgo, sanidad, discernimiento, hablar en lenguas, interpretación, y la profecía. Cada don es diferente, pero cada persona y cada don es importante, que somos más fuertes cuando usamos nuestros dones juntos para servir a Dios y a los demás.{{< scripture icon="6" num="6" verse="1 Corintios 12:11||1 Pedro 4:10||Romanos 12:4-5" >}}
 Pero todas estas cosas las hace uno y el mismo Espíritu, repartiendo a cada uno en particular como él quiere.
 ---
 Cada uno según el don que ha recibido, minístrelo a los otros, como buenos administradores de la multiforme gracia de Dios.
