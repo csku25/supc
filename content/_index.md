@@ -10,7 +10,7 @@ hero_button_link = "location/"
 <div class="sticky-wrapper">
 <div class="bio-layout">
 <div class="profile-card">
-{{< figure src="img/blank_profile.png" width="200" height="200" alt="Pastor Ismael Mena" >}}
+{{< figure src="/img/blank_profile.png" width="200" height="200" alt="Pastor Ismael Mena" >}}
 
 ## Pastor Ismael Mena
 </div>
