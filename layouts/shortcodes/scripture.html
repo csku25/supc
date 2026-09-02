@@ -1,0 +1,87 @@
+{{- /*
+  Scripture pop-up shortcode.
+
+  Supports one or multiple scriptures.
+
+  Multiple references are separated with: ||
+  Multiple scripture texts are separated with: ---
+*/ -}}
+
+{{- $icon := .Get "icon" -}}
+{{- $num := .Get "num" | default $icon -}}
+{{- $verse := .Get "verse" -}}
+{{- $dy := .Get "dy" | default "0" -}}
+
+{{- $iconPath := printf "img/scripture_icons/scripture_icon_%s.png" $icon -}}
+{{- $imgSrc := "" -}}
+
+{{- if os.FileExists (printf "static/%s" $iconPath) -}}
+  {{- $imgSrc = $iconPath | relURL -}}
+{{- end -}}
+
+{{- $id := printf "scripture-%d" .Ordinal -}}
+
+{{/* Split references using || */}}
+{{- $verses := split $verse "||" -}}
+
+{{/* Split scripture content using --- */}}
+{{- $content := .Inner -}}
+{{- $texts := split $content "---" -}}
+
+<span class="scripture-ref">
+
+  <input
+    type="checkbox"
+    id="{{ $id }}"
+    class="scripture-toggle"
+  >
+
+  <label
+    for="{{ $id }}"
+    class="scripture-badge"
+    aria-label="Scripture reference {{ $num }}: {{ $verse }}"
+    style="top:{{ $dy }}px"
+  >
+    {{ if $imgSrc }}
+      <img
+        src="{{ $imgSrc }}"
+        width="20"
+        height="20"
+        alt=""
+      >
+    {{ else }}
+      <span class="scripture-badge-fallback">
+        {{ $num }}
+      </span>
+    {{ end }}
+  </label>
+
+  <label
+    for="{{ $id }}"
+    class="scripture-backdrop"
+    aria-hidden="true"
+  ></label>
+
+  <span class="scripture-panel">
+
+    {{ range $index, $reference := $verses }}
+
+      <span class="scripture-entry">
+
+        <span class="scripture-panel-verse">
+          {{ trim $reference " " }}
+        </span>
+
+        {{ if lt $index (len $texts) }}
+          <span class="scripture-panel-text">
+            {{ index $texts $index | markdownify }}
+          </span>
+        {{ end }}
+
+      </span>
+
+    {{ end }}
+
+  </span>
+
+</span>&nbsp;
