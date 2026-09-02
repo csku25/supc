@@ -93,6 +93,17 @@ main > article {
     padding-top: 2rem !important;
 }
 
+/* Keep the final contact section flush with the footer. */
+body.section-about_us main > article,
+body.section-about_us main > article > section {
+    padding-bottom: 0 !important;
+}
+
+.color-section .contact-email,
+.color-section .contact-email:visited {
+    color: #ffffff !important;
+}
+
 
 /* ============================================================
    5. FIXED NAVIGATION

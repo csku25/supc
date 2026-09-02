@@ -69,3 +69,19 @@ Brother Carlos A. Vega
 
 ## Association
 We are associated with [Pennsylvania District UPCI](https://padistrictupci.org/) under Section 1.
+
+
+<div class="color-section">
+<div class="color-section-inner">
+
+<div class="color-section-text-top">
+
+## **Get In Touch With Us**
+
+</div>
+
+<span style="color:orange; font-weight: bold;">Email:</span> <a class="contact-email" href="mailto:spanishupc955@gmail.com">spanishupc955&#64;gmail.com</a>
+<span style="color:orange; font-weight: bold;">Pastor's Phone:</span> <a href="tel:+16107415101" style="color:white;">Call (610) 741-5101</a>
+
+</div>
+</div>

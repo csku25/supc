@@ -69,3 +69,19 @@ Hermano Carlos A. Vega
 
 ## Asociación
 Estámos asociados del [Distrito Pennsilvania UPCI](https://padistrictupci.org/) bajo la Sección 1.
+
+
+<div class="color-section">
+<div class="color-section-inner">
+
+<div class="color-section-text-top">
+
+## **Contáctanos**
+
+</div>
+
+<span style="color:orange; font-weight: bold;">Email:</span> <a class="contact-email" href="mailto:spanishupc955@gmail.com">spanishupc955&#64;gmail.com</a>
+<span style="color:orange; font-weight: bold;">Num. Tele. del Pastor:</span> <a href="tel:+16107415101" style="color:white;">Llama +1(610) 741-5101</a>
+
+</div>
+</div>
