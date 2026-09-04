@@ -54,7 +54,7 @@ Y todo lo que hacéis, sea de palabra o de hecho, hacedlo todo en el nombre del 
 <sup>14</sup>¿Está alguno enfermo entre vosotros? Llame a los ancianos de la iglesia, y oren por él, ungiéndole con aceite en el nombre del Señor. <sup>15</sup>Y la oración de fe salvará al enfermo, y el Señor lo levantará; y si hubiere cometido pecados, le serán perdonados.
 {{< /scripture >}}
 
-Sobre todo, creemos que Jesús vuelve a llevar Su iglesia y esperamos pasar la eternidad con Él.{{< scripture icon="9" num="9" verse="Juan 14:2-3||Apocalipsis 21:3-4" >}}
+Sobre todo, creemos que Jesús volverá para llevar Su iglesia y esperamos pasar la eternidad con Él.{{< scripture icon="9" num="9" verse="Juan 14:2-3||Apocalipsis 21:3-4" >}}
 <sup>2</sup><span style="color: #8f0101;">En la casa de mi Padre muchas moradas hay; si así no fuera, yo os lo hubiera dicho; voy, pues, a preparar lugar para vosotros.</span> <sup>3</sup><span style="color: #8f0101;">Y si me fuere y os preparare lugar, vendré otra vez, y os tomaré a mí mismo, para que donde yo estoy, vosotros también estéis.</span>
 ---
 <sup>3</sup>Y oí una gran voz del cielo que decía: He aquí el tabernáculo de Dios con los hombres, y él morará con ellos; y ellos serán su pueblo, y Dios mismo estará con ellos como su Dios. <sup>4</sup>Enjugará Dios toda lágrima de los ojos de ellos; y ya no habrá muerte, ni habrá más llanto, ni clamor, ni dolor; porque las primeras cosas pasaron.
