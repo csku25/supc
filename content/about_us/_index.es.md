@@ -4,11 +4,11 @@ featured_image = "/img/church.png"
 +++
 
 # Quiénes Somos
-Somos una congregación centrada en Cristo y comprometida con compartir el mensaje de Jesucristo y servir a nuestra comunidad. Deseamos ser un lugar de bienvenida donde los individuales y las familias puedan crecer en su fe, experimentar la presencia de Dios y formar relaciones significativas.
+Somos una congregación de más de 40 años serviendo la comunidad, comprometida en compartir el mensaje de Jesucristo. Somos un lugar de bienvenida donde los individuos y las familias puedan crecer en su fe, sentir la presencia de Dios y formar relaciones significativas.
 
-Nuestra iglesia está dedicada a la enseñanza bíblica, la oración, la adoración, y la confraternidad. Tenemos un propósito en Dios y que la iglesia ha sido llamada a compartir Su amor con compasión y gracia.
+Nuestra iglesia está dedicada a la enseñanza bíblica, la oración, la adoración, y la confraternidad. Nuestro propósito en Dios es de compartir Su amor, Su misericordia, y Su gracia.
 
-Sea que nos visites por primera vez o que estés buscando apoyo en la fe, te invitamos a acompañarnos. Venga tal como eres, adora con nosotros y descubra una comunidad impulsado por esperanza y amor.
+Sea que nos visites por primera vez o que estés buscando apoyo en la fe, te invitamos a acompañarnos. Ven tal como estés, adora con nosotros y siéntase parte de una comunidad impulsada por esperanza y amor.
 
 #### La primera vez que entras por nuestras puertas, eres un visitante. ¡Después de eso, eres parte de la familia!
 

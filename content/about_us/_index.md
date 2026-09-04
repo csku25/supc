@@ -4,9 +4,9 @@ featured_image = "/img/church.png"
 +++
 
 # Who We are
-We are a Christ-centered congregation committed to sharing the message of Jesus Christ and serving our local community. We seek to be a welcoming place where individuals and families can grow in their faith, experience God’s presence, and build meaningful relationships.
+We are a congregation spanning over 40 years serving the local community, committed to sharing the message of Jesus Christ. We are a welcoming place where individuals and families can grow in their faith, experience God’s presence, and build meaningful relationships.
 
-Our church is dedicated to biblical teaching, prayer, worship, and fellowship. We believe that we have purpose in God and that the church is called to share His love with compassion and grace.
+Our church is dedicated to biblical teaching, prayer, worship, and fellowship. We believe that we have purpose in God and that we are called to share His love, His mercy, and His grace.
 
 Whether you are visiting for the first time or looking for support in the faith, we invite you to join us. Come as you are, worship with us, and discover a community driven by hope and love.
 
