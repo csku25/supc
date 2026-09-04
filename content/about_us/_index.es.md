@@ -14,7 +14,7 @@ Sea que nos visites por primera vez o que estés buscando apoyo en la fe, te inv
 
 
 # En que Creemos
-Vengamos de diferentes países y culturas, pero formamos una familia unida de hermanos y hermanas en Cristo.{{< scripture icon="1" num="1" verse="Galatas 3:28" >}}
+Aunque vengamos de diferentes países y culturas, formamos una familia unida de hermanos y hermanas en Cristo.{{< scripture icon="1" num="1" verse="Galatas 3:28" >}}
 Ya no hay judío ni griego; no hay esclavo ni libre; no hay varón ni mujer; porque todos vosotros sois uno en Cristo Jesús.
 {{< /scripture >}} En la SUPC de Reading, creemos que la Biblia es verdad, la Palabra de Dios y el fundamento de nuestra fe. Creemos que nos enseña cómo conocer a Dios, vivir para Él y amar a los demás.{{< scripture icon="2" num="2" verse="Salmos 119:160||2 Timoteo 3:16-17" >}}
 La suma de tu palabra es verdad, Y eterno es todo juicio de tu justicia.
