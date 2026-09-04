@@ -25,18 +25,18 @@ The entirety of Your word is truth, And every one of Your righteous judgments en
 We believe there is only one God, and that is Jesus Christ who is God manifested in flesh.{{< scripture icon="3" num="3" verse="John 1:14||1 Timothy 3:16" >}}
 And the Word became flesh and dwelt among us, and we beheld His glory, the glory as of the only begotten of the Father, full of grace and truth.
 ---
-And without controversy great is the mystery of godliness:  God was manifested in the flesh, justified in the Spirit, seen by angels, preached among the Gentiles, believed on in the world, received up in glory.
+And without controversy great is the mystery of godliness: God was manifested in the flesh, justified in the Spirit, seen by angels, preached among the Gentiles, believed on in the world, received up in glory.
 {{< /scripture >}} We believe Jesus died for our sins, rose again, and is the only way to salvation and eternal life, and that salvation is individual.{{< scripture icon="4" num="4" verse="1 Corinthians 15:3||John 14:6" >}}
 For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures...
 ---
 Jesus said to him, "<span style="color: #8f0101;">I am the way, the truth, and the life. No one comes to the Father except through Me.</span>"
 {{< /scripture >}}
 
-We believe that everyone needs to repent, which means turning away from sin and turning to God. We believe in water baptism in the name of Jesus Christ and in receiving the Holy Spirit.{{< scripture icon="5" num="5" verse="Acts 2:38" >}}
+We believe that everyone needs to repent, which means turning away from sin and turning to God and living a holy life. We believe in water baptism in the name of Jesus Christ and to be filled with the Holy Spirit.{{< scripture icon="5" num="5" verse="Acts 2:38" >}}
 Then Peter said to them, “Repent, and let every one of you be baptized in the name of Jesus Christ for the remission of sins; and you shall receive the gift of the Holy Spirit. 
 {{< /scripture >}}
 
-God has given every believer spiritual gifts and talents to use for His purpose like leadership, healing, discernment, speaking in tongues, interpretation, and prophecy. Each gift is different, but every person and every gift is important, and we are stronger when we use our gifts together to serve God and others.{{< scripture icon="6" num="6" verse="1 Corinthians 12:11||1 Peter 4:10||Romans 12:4-5" >}}
+God has given His church spiritual gifts and talents to use for His purpose like leadership, healing, discernment, interpretation, and prophecy. Each gift is different and has its own purpose. All are important and we are stronger when we use our gifts together to serve God and others.{{< scripture icon="6" num="6" verse="1 Corinthians 12:11||1 Peter 4:10||Romans 12:4-5" >}}
 But one and the same Spirit works all these things, distributing to each one individually as He wills.
 ---
 As each one has received a gift, minister it to one another, as good stewards of the manifold grace of God. 
