@@ -26,7 +26,7 @@ Creemos que hay un solo Dios, que es Jesucristo, Dios manifestado en carne.{{< s
 Y aquel Verbo fue hecho carne, y habitó entre nosotros (y vimos su gloria, gloria como del unigénito del Padre), lleno de gracia y de verdad.
 ---
 E indiscutiblemente, grande es el misterio de la piedad: Dios fue manifestado en carne, justificado en el Espíritu, visto de los ángeles, predicado a los gentiles, creído en el mundo, recibido arriba en gloria.
-{{< /scripture >}} Creemos que Jesús murió por nuestros pecados, resucitó, y es el único camino a la salvación y la vida eterna, y que la salvación es personal.{{< scripture icon="4" num="4" verse="1 Corintios 15:3||Juan 14:6" >}}
+{{< /scripture >}} Creemos que Jesús murió por nuestros pecados, resucitó victorioso, y es el único camino a la salvación y la vida eterna, y que la salvación es personal.{{< scripture icon="4" num="4" verse="1 Corintios 15:3||Juan 14:6" >}}
 Porque primeramente os he enseñado lo que asimismo recibí: Que Cristo murió por nuestros pecados, conforme a las Escrituras;
 ---
 Jesús le dijo: <span style="color: #8f0101;">Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí.</span>
