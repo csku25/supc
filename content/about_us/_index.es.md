@@ -48,7 +48,7 @@ Creemos que ser cristiano es un caminar diario con Dios. Queremos vivir de una m
 Y decía a todos: <span style="color: #8f0101;">Si alguno quiere venir en pos de mí, niéguese a sí mismo, tome su cruz cada día, y sígame.</span>
 ---
 Y todo lo que hacéis, sea de palabra o de hecho, hacedlo todo en el nombre del Señor Jesús, dando gracias a Dios Padre por medio de él.
-{{< /scripture >}} Creemos que Dios todavía obra en la vida de las personas hoy en día. Creemos en el poder de la oración, los dones espirituales y la capacidad de Dios para sanar y restaurar.{{< scripture icon="8" num="8" verse="Filipenses 2:13||Santiago 5:14-15" >}}
+{{< /scripture >}} Creemos que Dios hoy en día obra en la vida de las personas. Creemos en el poder de la oración, los dones espirituales y la capacidad de Dios para sanar y restaurar.{{< scripture icon="8" num="8" verse="Filipenses 2:13||Santiago 5:14-15" >}}
 ...porque Dios es el que en vosotros produce así el querer como el hacer, por su buena voluntad.
 ---
 <sup>14</sup>¿Está alguno enfermo entre vosotros? Llame a los ancianos de la iglesia, y oren por él, ungiéndole con aceite en el nombre del Señor. <sup>15</sup>Y la oración de fe salvará al enfermo, y el Señor lo levantará; y si hubiere cometido pecados, le serán perdonados.
