@@ -26,7 +26,7 @@ We believe there is only one God, and that is Jesus Christ who is God manifested
 And the Word became flesh and dwelt among us, and we beheld His glory, the glory as of the only begotten of the Father, full of grace and truth.
 ---
 And without controversy great is the mystery of godliness:  God was manifested in the flesh, justified in the Spirit, seen by angels, preached among the Gentiles, believed on in the world, received up in glory.
-{{< /scripture >}} We believe Jesus died for our sins, rose again, and is the only way to salvation, and that salvation is individual.{{< scripture icon="4" num="4" verse="1 Corinthians 15:3||John 14:6" >}}
+{{< /scripture >}} We believe Jesus died for our sins, rose again, and is the only way to salvation and eternal life, and that salvation is individual.{{< scripture icon="4" num="4" verse="1 Corinthians 15:3||John 14:6" >}}
 For I delivered to you first of all that which I also received: that Christ died for our sins according to the Scriptures...
 ---
 Jesus said to him, "<span style="color: #8f0101;">I am the way, the truth, and the life. No one comes to the Father except through Me.</span>"
