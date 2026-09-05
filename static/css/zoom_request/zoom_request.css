@@ -1,0 +1,26 @@
+header h1 {
+    font-size: clamp(0.85rem, 3.6vw, 2rem);
+}
+
+.zoom-request-form input {
+    margin-bottom: 1rem;
+}
+
+.zoom-request-form input:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    header.cover {
+        min-height: 40vh !important;
+    }
+}
+
+.zoom-request-submit {
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    font-family: inherit;
+}

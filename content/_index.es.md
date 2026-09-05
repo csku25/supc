@@ -47,5 +47,8 @@ Este es su biografía. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
     <span style="color:orange; font-weight: bold;">Culto de Oración:</span>
     <span>Jueves - 7:00 PM</span>
 </div>
+
+### ¡También retransmitimos en directo los servicios!
+<a href="zoom_request/" class="hero-button">Solicitar Info de Zoom</a>
 </div>
 </div>

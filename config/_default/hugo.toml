@@ -1,5 +1,6 @@
-baseURL = "/"
-locale = 'es-es'
+# localhost:1313 for local development, gets overwritten in deployment
+baseURL = "http://localhost:1313/"
+locale = 'us-en'
 title = 'SUPC'
 theme = 'ananke'
 

@@ -1,1 +1,0 @@
-need to remove scroll arrow from all desktop pages except homepage

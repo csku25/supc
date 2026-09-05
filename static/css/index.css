@@ -236,6 +236,10 @@ header .tc-l h2.homepage-only::after {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.nested-links a.hero-button {
+    color: #ffffff;
+}
+
 .hero-button:hover {
     background-color: rgba(255, 174, 0, 0.8);
 

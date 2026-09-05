@@ -47,6 +47,10 @@
     {{ if eq .Section "about_us" }}
       <link rel="stylesheet" href='{{ "css/about_us/about_us.css" | relURL }}'>
     {{ end }}
+    {{ if eq .Section "zoom_request" }}
+      <link rel="stylesheet" href='{{ "css/zoom_request/zoom_request.css" | relURL }}'>
+      <link rel="stylesheet" href='{{ "css/zoom_request/thank_you.css" | relURL }}'>
+    {{ end }}
     {{ partials.Include "site-scripts.html" . }}
 
     {{ block "favicon" . }}
