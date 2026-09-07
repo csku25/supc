@@ -19,4 +19,40 @@
     {{ end }}
     {{ partial "pagination.html" . -}}
   </article>
+
+  {{ if eq .Section "zoom_request" }}
+    <script>
+      document.querySelectorAll('.zoom-request-form').forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          var submitButton = form.querySelector('[type="submit"]');
+          var endpoint = new URL(form.action);
+          var redirectUrl = form.querySelector('[name="_next"]').value;
+
+          endpoint.pathname = '/ajax' + endpoint.pathname;
+          submitButton.disabled = true;
+
+          fetch(endpoint, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' }
+          })
+            .then(function (response) {
+              if (!response.ok) {
+                throw new Error('Form submission failed');
+              }
+              return response.text();
+            })
+            .then(function () {
+              window.location.assign(redirectUrl);
+            })
+            .catch(function () {
+              submitButton.disabled = false;
+              window.alert('Unable to submit the form. Please try again.');
+            });
+        });
+      });
+    </script>
+  {{ end }}
 {{ end }}
