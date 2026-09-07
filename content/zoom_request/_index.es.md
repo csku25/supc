@@ -5,21 +5,33 @@ featured_image = "/img/banners/church.png"
 
 Para proteger nuestro culto en línea, el enlace y la contraseña de nuestra reunión de Zoom no son públicados. Por favor comparta tu nombre y número de teléfono a continuación, y alguien de nuestra iglesia te contactará.
 
-<form class="zoom-request-form black-80 sans-serif mw6 center" accept-charset="UTF-8" action="https://formsubmit.co/spanishupc955@gmail.com" method="POST" role="form">
+<!-- Added id="zoom-form" to your opening form tag -->
+<form id="zoom-form" class="zoom-request-form black-80 sans-serif mw6 center" accept-charset="UTF-8" action="https://formsubmit.co/spanishupc955@gmail.com" method="POST" role="form">
 
-<input type="hidden" name="_subject" value="Zoom Info Request" />
-<input type="hidden" name="_template" value="table" />
-<input type="hidden" name="_next" value="https://csku25.github.io/supc/es/zoom_request/thank_you/" />
-<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+  <!-- Added id="email-subject" to make it targetable by JavaScript -->
+  <input type="hidden" name="_subject" id="email-subject" value="Zoom Info Request" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_next" value="https://csku25.github.io/supc/zoom_request/thank_you/" />
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
-<input type="text" id="name" name="Nombre" class="w-100 f5 pv3 ph3 bg-light-gray bn" required placeholder="Nombre Completo" aria-labelledby="name" />
+  <input type="text" id="name" name="Nombre" class="w-100 f5 pv3 ph3 bg-light-gray bn" required placeholder="Nombre Completo" aria-labelledby="name" />
 
-<input type="tel" id="phone" name="Número de Teléfono" class="w-100 f5 pv3 ph3 bg-light-gray bn" required placeholder="Número de Teléfono" aria-labelledby="phone" />
+  <input type="tel" id="phone" name="Número de Teléfono" class="w-100 f5 pv3 ph3 bg-light-gray bn" required placeholder="Número de Teléfono" aria-labelledby="phone" />
 
-<input type="text" id="message" name="Message" class="w-100 f5 pv3 ph3 bg-light-gray bn" placeholder="Mensaje (opcional)" aria-labelledby="message" />
+  <input type="text" id="message" name="Mensaje" class="w-100 f5 pv3 ph3 bg-light-gray bn" placeholder="Mensaje (optional)" aria-labelledby="message" />
 
-<div class="tc mt4 mb3">
-<button type="submit" class="hero-button zoom-request-submit">Enviar</button>
-</div>
+  <div class="tc mt4 mb3">
+    <button type="submit" class="hero-button zoom-request-submit">Submit</button>
+  </div>
 
 </form>
+
+<!-- This script intercepts the submit button, pulls the user's name, and appends a dynamic timestamp -->
+<script>
+  document.getElementById('zoom-form').addEventListener('submit', function() {
+    const subjectField = document.getElementById('email-subject');    
+    const timeStamp = new Date().toLocaleTimeString(); 
+    subjectField.value = "Zoom Info Request - " + timeStamp;
+  });
+</script>
+
