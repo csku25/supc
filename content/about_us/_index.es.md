@@ -81,7 +81,7 @@ Estámos asociados del [Distrito Pennsilvania UPCI](https://padistrictupci.org/)
 </div>
 
 <span style="color:orange; font-weight: bold;">Email:</span> <a class="contact-email" href="mailto:spanishupc955@gmail.com">spanishupc955&#64;gmail.com</a>
-<span style="color:orange; font-weight: bold;">Num. Tele. del Pastor:</span> <a href="tel:+14849872876" style="color:white;">Llama (484) 987-2876</a>
+<span style="color:orange; font-weight: bold;">Número de Teléfono:</span> <a href="tel:+14849872876" style="color:white;">Llama (484) 987-2876</a>
 
 </div>
 </div>
