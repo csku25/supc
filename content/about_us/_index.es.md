@@ -1,6 +1,6 @@
 +++
 title = "Sobre Nosotros"
-featured_image = "/img/church.png"
+featured_image = "/img/banners/church.png"
 +++
 
 # Quiénes Somos
