@@ -632,6 +632,16 @@
         text-align: center !important;
     }
 
+    .color-section-inner .hero-button {
+        position: relative !important;
+
+        left: auto !important;
+
+        bottom: auto !important;
+
+        transform: none !important;
+    }
+
 
     /* --------------------------------------------------------
        SERVICE TIMES

@@ -15,7 +15,7 @@ hero_button_link = "location/"
 ## Pastor Ismael Mena
 </div>
 <div class="bio-text">
-This is his bio. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Originally from Peru, he came to know the Lord in 1993 and began a journey of faith with Jesus. That same year, he moved to Pennsylvania, settling in the city of Lewisburg, where he was baptized. In 1994, he received the Holy Spirit, marking a significant moment in his spiritual life. That same year, he married his wife Sister Mena, who was an important part of his life and his early years of ministry. In 1996, he began as a minister with the United Pentecostal Church International (UPCI). He served as pastor in Lewisburg until 2004. In 2005, he moved to the city of Reading, Pennsylvania, where he continued to develop the calling God had placed on his life. Since then, he has served the local community of Reading.
 </div>
 </div>
 </div>

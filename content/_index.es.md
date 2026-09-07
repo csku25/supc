@@ -15,7 +15,7 @@ hero_button_link = "location/"
 ## Pastor Ismael Mena
 </div>
 <div class="bio-text">
-Este es su biografía. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Originario del Perú, conoció al Señor en el año 1993 y comenzó desde entonces un caminar con Jesús. Ese mismo año llegó al estado de Pennsylvania, estableciéndose en la ciudad de Lewisburg, donde fue bautizado. En el año 1994, recibió el Espíritu Santo, marcando un momento significativo en su vida espiritual. Ese mismo año contrajo matrimonio con la Hermana Mena, quien fue una parte importante de su vida y de sus primeros años de ministerio. En 1996, comenzó su ministerio como ministro de la Iglesia Pentecostal Unida Internacional (UPCI). Sirvió como pastor en Lewisburg hasta el año 2004. En el año 2005, llegó a la ciudad de Reading, Pennsylvania, donde continuó desarrollando el llamado que Dios había puesto en su vida. Desde entonces, ha servido a la comunidad de Reading.
 </div>
 </div>
 </div>

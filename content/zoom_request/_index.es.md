@@ -9,7 +9,7 @@ Para proteger nuestro culto en línea, el enlace y la contraseña de nuestra reu
 
 <input type="hidden" name="_subject" value="Zoom Info Request" />
 <input type="hidden" name="_template" value="table" />
-{{< zoom-request-next >}}
+<input type="hidden" name="_next" value="http://localhost:1313/es/zoom_request/thank_you/" />
 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
 <input type="text" id="name" name="Nombre" class="w-100 f5 pv3 ph3 bg-light-gray bn" required placeholder="Nombre Completo" aria-labelledby="name" />
