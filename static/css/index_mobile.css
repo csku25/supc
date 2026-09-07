@@ -271,7 +271,7 @@
        HERO BUTTON
        -------------------------------------------------------- */
 
-    .hero-button {
+    header.cover .hero-button {
         position: absolute !important;
 
         left: 50% !important;
@@ -305,7 +305,7 @@
         transform: translateX(-50%) !important;
     }
 
-    .hero-button:hover {
+    header.cover .hero-button:hover {
         transform: translateX(-50%) translateY(-2px) !important;
     }
 
@@ -818,7 +818,7 @@
         top: 2rem !important;
     }
 
-    .hero-button {
+    header.cover .hero-button {
         bottom: 1rem !important;
 
         padding-top: 0.5rem !important;
