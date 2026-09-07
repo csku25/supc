@@ -81,7 +81,7 @@ We are associated with [Pennsylvania District UPCI](https://padistrictupci.org/)
 </div>
 
 <span style="color:orange; font-weight: bold;">Email:</span> <a class="contact-email" href="mailto:spanishupc955@gmail.com">spanishupc955&#64;gmail.com</a>
-<span style="color:orange; font-weight: bold;">Pastor's Phone:</span> <a href="tel:+16107415101" style="color:white;">Call (610) 741-5101</a>
+<span style="color:orange; font-weight: bold;">Phone:</span> <a href="tel:+14849872876" style="color:white;">Call (484) 987-2876</a>
 
 </div>
 </div>
