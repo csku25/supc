@@ -58,6 +58,11 @@ title = "Spanish United Pentecostal Church"
   weight = 40
 
 [[menus.main]]
+  name = "Request Prayer"
+  pageRef = "/prayer_request/"
+  weight = 50
+
+[[menus.main]]
   name = "About Us"
   pageRef = "/about_us/"
-  weight = 50
+  weight = 60
