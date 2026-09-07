@@ -1,0 +1,32 @@
+{{ define "header" }}
+  <header class="not-found-hero" style="background-image: url('{{ "img/banners/church.png" | relURL }}');">
+    <div class="not-found-hero__overlay">
+      {{ partials.Include "site-navigation.html" . }}
+      <div class="not-found-hero__content">
+        {{ if eq .Lang "es" }}
+          <p></p>
+          <h1>Página no encontrada</h1>
+          <h2>Código 404</h2>
+        {{ else }}
+          <p></p>
+          <h1>Page Not Found</h1>
+          <h2>Error Code 404</h2>
+        {{ end }}
+      </div>
+    </div>
+  </header>
+{{ end }}
+
+{{ define "main" }}
+  <main class="not-found-content tc">
+    {{ if eq .Lang "es" }}
+      <p>Lo sentimos, no pudimos encontrar la página que buscas.</p>
+      <a class="hero-button" href='{{ "/" | relLangURL }}'>Regresar al Inicio</a>
+      <p></p>
+    {{ else }}
+      <p>Sorry, we could not find the page you were looking for.</p>
+      <a class="hero-button" href='{{ "/" | relLangURL }}'>Return Home</a>
+      <p></p>
+    {{ end }}
+  </main>
+{{ end }}
