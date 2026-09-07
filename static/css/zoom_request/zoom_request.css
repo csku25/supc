@@ -6,8 +6,8 @@ header h1 {
     margin-bottom: 1rem;
 }
 
-.zoom-request-form input:last-of-type {
-    margin-bottom: 0;
+.zoom-request-form textarea:last-of-type {
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {

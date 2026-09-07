@@ -18,7 +18,7 @@ To protect our online service from spam, our Zoom meeting link and passcode are 
 
   <input type="tel" id="phone" name="Phone Number" class="w-100 f5 pv3 ph3 bg-light-gray bn" required placeholder="Phone Number" aria-labelledby="phone" />
 
-  <input type="text" id="message" name="Message" class="w-100 f5 pv3 ph3 bg-light-gray bn" placeholder="Message (optional)" aria-labelledby="message" />
+  <textarea maxlength="300" id="message" name="Message" class="w-100 f5 pv3 ph3 bg-light-gray bn" placeholder="Message (optional)" aria-labelledby="message"></textarea>
 
   <div class="tc mt4 mb3">
     <button type="submit" class="hero-button zoom-request-submit">Submit</button>

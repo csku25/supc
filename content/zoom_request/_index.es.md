@@ -18,7 +18,7 @@ Para proteger nuestro culto en línea, el enlace y la contraseña de nuestra reu
 
   <input type="tel" id="phone" name="Número de Teléfono" class="w-100 f5 pv3 ph3 bg-light-gray bn" required placeholder="Número de Teléfono" aria-labelledby="phone" />
 
-  <input type="text" id="message" name="Mensaje" class="w-100 f5 pv3 ph3 bg-light-gray bn" placeholder="Mensaje (optional)" aria-labelledby="message" />
+  <textarea maxlength="300" id="message" name="Mensaje" class="w-100 f5 pv3 ph3 bg-light-gray bn" placeholder="Mensaje (opcional)" aria-labelledby="message"></textarea>
 
   <div class="tc mt4 mb3">
     <button type="submit" class="hero-button zoom-request-submit">Submit</button>
