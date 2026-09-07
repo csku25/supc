@@ -3,7 +3,7 @@ title = "Request Prayer"
 featured_image = "/img/banners/church.png"
 +++
 
-Are you in need of prayer? Feel free to submit a prayer request by providing your name and the nature of your need. Your request will be forwarded to our prayer warriors as soon as we receive them.
+Are you in need of prayer? Feel free to submit a prayer request by providing your name and the nature of your need. Your request will be forwarded to our prayer warriors as soon as we receive it.
 
 <form id="prayer-form" class="prayer-request-form black-80 sans-serif mw6 center" accept-charset="UTF-8" action="https://formsubmit.co/spanishupc955@gmail.com" method="POST" role="form">
 
