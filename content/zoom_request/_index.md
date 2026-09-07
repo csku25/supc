@@ -9,7 +9,7 @@ To protect our online service from spam, our Zoom meeting link and passcode are 
 
 <input type="hidden" name="_subject" value="Zoom Info Request" />
 <input type="hidden" name="_template" value="table" />
-<input type="hidden" name="_next" value="http://localhost:1313/zoom_request/thank_you/" />
+<input type="hidden" name="_next" value="http://csku25.github.io/supc/zoom_request/thank_you/" />
 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
 <input type="text" id="name" name="Name" class="w-100 f5 pv3 ph3 bg-light-gray bn" required placeholder="Full Name" aria-labelledby="name" />
