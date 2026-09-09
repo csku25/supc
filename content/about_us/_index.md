@@ -3,7 +3,7 @@ title = "About Us"
 featured_image = "/img/banners/church.png"
 +++
 
-# Who We are
+# Who We Are
 We are a congregation spanning over 40 years serving the local community, committed to sharing the message of Jesus Christ. We are a welcoming place where individuals and families can grow in their faith, experience God’s presence, and build meaningful relationships.
 
 Our church is dedicated to biblical teaching, prayer, worship, and fellowship. We believe that we have purpose in God and that we are called to share His love, His mercy, and His grace.
