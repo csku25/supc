@@ -30,7 +30,7 @@ title = "Spanish United Pentecostal Church"
   weight = 40
 
 [[menus.main]]
-  name = "Los Jovenes y Jovenes Adultos"
+  name = "Los Jóvenes y Jóvenes Adultos"
   parent = "ministries"
   pageRef = "/ministries/youth_hyphen/"
   weight = 50
