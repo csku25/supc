@@ -5,6 +5,35 @@
   {{ end }}
 
   <article class="pa3 pa4-ns nested-copy-line-height">
+    {{ if eq .Section "events" }}
+      <div class="events-calendar" data-events-calendar>
+        <div class="events-calendar__intro">
+          <p class="events-calendar__eyebrow">{{ .Title }}</p>
+          <h2>Plan what is ahead</h2>
+          <p>Select a day to see its events or add something new to the calendar.</p>
+        </div>
+
+        <div class="events-calendar__workspace">
+          <section class="events-calendar__panel" aria-labelledby="calendar-heading">
+            <div class="events-calendar__toolbar">
+              <button class="events-calendar__nav" type="button" data-calendar-previous aria-label="Previous month">&#8592;</button>
+              <h2 id="calendar-heading" data-calendar-heading></h2>
+              <button class="events-calendar__nav" type="button" data-calendar-next aria-label="Next month">&#8594;</button>
+            </div>
+            <div class="events-calendar__weekdays" aria-hidden="true">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="events-calendar__grid" data-calendar-grid role="grid" aria-label="Monthly calendar"></div>
+          </section>
+
+          <aside class="events-calendar__details" aria-live="polite">
+            <div class="events-calendar__selected-date" data-selected-date></div>
+            <div class="events-calendar__event-list" data-event-list></div>
+          </aside>
+        </div>
+        <div class="events-calendar__source" hidden>{{ .Content }}</div>
+      </div>
+    {{ else }}
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
       {{- .Content -}}
     </section>
@@ -17,8 +46,104 @@
         {{ end }}
       </section>
     {{ end }}
+    {{ end }}
     {{ partial "pagination.html" . -}}
   </article>
+
+  {{ if eq .Section "events" }}
+    <script>
+      (function () {
+        var root = document.querySelector('[data-events-calendar]');
+        if (!root) return;
+
+        var today = new Date();
+        var viewDate = new Date(today.getFullYear(), today.getMonth(), 1);
+        var selectedDate = formatDate(today);
+        var events = {};
+        var heading = root.querySelector('[data-calendar-heading]');
+        var grid = root.querySelector('[data-calendar-grid]');
+        var selectedDateLabel = root.querySelector('[data-selected-date]');
+        var eventList = root.querySelector('[data-event-list]');
+
+        function formatDate(date) {
+          return date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0');
+        }
+
+        function escapeHtml(value) {
+          return String(value || '').replace(/[&<>'\"]/g, function (character) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '\"': '&quot;' }[character];
+          });
+        }
+
+        function renderCalendar() {
+          var year = viewDate.getFullYear();
+          var month = viewDate.getMonth();
+          var firstDay = new Date(year, month, 1).getDay();
+          var daysInMonth = new Date(year, month + 1, 0).getDate();
+          heading.textContent = viewDate.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+          grid.innerHTML = '';
+
+          for (var index = 0; index < firstDay; index += 1) {
+            var blank = document.createElement('span');
+            blank.className = 'events-calendar__day events-calendar__day--empty';
+            blank.setAttribute('aria-hidden', 'true');
+            grid.appendChild(blank);
+          }
+
+          for (var day = 1; day <= daysInMonth; day += 1) {
+            var date = new Date(year, month, day);
+            var dateKey = formatDate(date);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'events-calendar__day';
+            button.dataset.date = dateKey;
+            button.setAttribute('role', 'gridcell');
+            button.setAttribute('aria-label', date.toLocaleDateString(undefined, { dateStyle: 'long' }));
+            button.innerHTML = '<span>' + day + '</span>' + (events[dateKey] && events[dateKey].length ? '<i aria-label="Has events">' + events[dateKey].length + '</i>' : '');
+            if (dateKey === selectedDate) button.classList.add('is-selected');
+            if (dateKey === formatDate(today)) button.classList.add('is-today');
+            button.addEventListener('click', function () {
+              selectedDate = this.dataset.date;
+              renderCalendar();
+              renderDetails();
+            });
+            grid.appendChild(button);
+          }
+        }
+
+        function renderDetails() {
+          var date = new Date(selectedDate + 'T12:00:00');
+          selectedDateLabel.textContent = date.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+          var dayEvents = events[selectedDate] || [];
+          eventList.innerHTML = dayEvents.length ? dayEvents.map(function (event) {
+            return '<article class="events-calendar__event"><h3>' + escapeHtml(event.title) + '</h3>' + (event.description ? '<p>' + escapeHtml(event.description) + '</p>' : '') + (event.flyer ? '<img src="' + escapeHtml(event.flyer) + '" alt="Flyer for ' + escapeHtml(event.title) + '">' : '') + '</article>';
+          }).join('') : '<p class="events-calendar__empty">No events planned for this day.</p>';
+        }
+
+        root.querySelectorAll('[data-calendar-event]').forEach(function (eventNode) {
+          var event = {
+            date: eventNode.dataset.date,
+            title: eventNode.dataset.title,
+            description: eventNode.dataset.description,
+            flyer: eventNode.dataset.flyer
+          };
+          if (!event.date || !event.title) return;
+          if (!events[event.date]) events[event.date] = [];
+          events[event.date].push(event);
+        });
+
+        root.querySelector('[data-calendar-previous]').addEventListener('click', function () {
+          viewDate.setMonth(viewDate.getMonth() - 1); renderCalendar();
+        });
+        root.querySelector('[data-calendar-next]').addEventListener('click', function () {
+          viewDate.setMonth(viewDate.getMonth() + 1); renderCalendar();
+        });
+
+        renderCalendar();
+        renderDetails();
+      }());
+    </script>
+  {{ end }}
 
   {{ if eq .Section "zoom_request" }}
     <script>
