@@ -1,0 +1,11 @@
+{{ define "header" }}
+  {{ partials.Include "site-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="events-detail">
+    <div class="events-detail__content nested-copy-line-height lh-copy nested-links">
+      {{- .Content -}}
+    </div>
+  </article>
+{{ end }}

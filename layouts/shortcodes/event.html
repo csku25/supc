@@ -1,7 +1,9 @@
 <div
   data-calendar-event
-  data-date="{{ .Get "date" }}"
+  data-start-date="{{ .Get "start_date" }}"
+  data-end-date="{{ .Get "end_date" | default "" }}"
   data-title="{{ .Get "title" }}"
   data-description="{{ .Get "description" | default "" }}"
-  data-flyer="{{ .Get "flyer" | default "" }}">
+  data-flyer="{{ .Get "flyer" | default "" }}"
+  data-read-more="{{ .Get "read_more" | default "" }}">
 </div>

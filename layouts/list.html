@@ -6,32 +6,10 @@
 
   <article class="pa3 pa4-ns nested-copy-line-height">
     {{ if eq .Section "events" }}
-      <div class="events-calendar" data-events-calendar>
-        <div class="events-calendar__intro">
-          <p class="events-calendar__eyebrow">{{ .Title }}</p>
-          <h2>Plan what is ahead</h2>
-          <p>Select a day to see its events or add something new to the calendar.</p>
-        </div>
-
-        <div class="events-calendar__workspace">
-          <section class="events-calendar__panel" aria-labelledby="calendar-heading">
-            <div class="events-calendar__toolbar">
-              <button class="events-calendar__nav" type="button" data-calendar-previous aria-label="Previous month">&#8592;</button>
-              <h2 id="calendar-heading" data-calendar-heading></h2>
-              <button class="events-calendar__nav" type="button" data-calendar-next aria-label="Next month">&#8594;</button>
-            </div>
-            <div class="events-calendar__weekdays" aria-hidden="true">
-              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
-            </div>
-            <div class="events-calendar__grid" data-calendar-grid role="grid" aria-label="Monthly calendar"></div>
-          </section>
-
-          <aside class="events-calendar__details" aria-live="polite">
-            <div class="events-calendar__selected-date" data-selected-date></div>
-            <div class="events-calendar__event-list" data-event-list></div>
-          </aside>
-        </div>
-        <div class="events-calendar__source" hidden>{{ .Content }}</div>
+      <div class="events-upcoming" data-events-upcoming>
+        <div class="events-upcoming__list" data-event-list aria-live="polite"></div>
+        <p class="events-upcoming__more">{{ if eq .Language.Lang "es" }}¡Más por venir!{{ else }}More to come!{{ end }}</p>
+        <div class="events-upcoming__source" hidden>{{ .Content }}</div>
       </div>
     {{ else }}
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
@@ -53,94 +31,144 @@
   {{ if eq .Section "events" }}
     <script>
       (function () {
-        var root = document.querySelector('[data-events-calendar]');
+        var root = document.querySelector('[data-events-upcoming]');
         if (!root) return;
 
-        var today = new Date();
-        var viewDate = new Date(today.getFullYear(), today.getMonth(), 1);
-        var selectedDate = formatDate(today);
-        var events = {};
-        var heading = root.querySelector('[data-calendar-heading]');
-        var grid = root.querySelector('[data-calendar-grid]');
-        var selectedDateLabel = root.querySelector('[data-selected-date]');
         var eventList = root.querySelector('[data-event-list]');
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+        var pageLocale = document.documentElement.lang || undefined;
+        var readMoreLabel = {{ lang.Translate "readMore" | jsonify | safeJS }};
 
-        function formatDate(date) {
-          return date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0');
-        }
-
-        function escapeHtml(value) {
-          return String(value || '').replace(/[&<>'\"]/g, function (character) {
-            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '\"': '&quot;' }[character];
+        function formatDate(dateString) {
+          return new Date(dateString + 'T12:00:00').toLocaleDateString(pageLocale, {
+            weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
           });
         }
 
-        function renderCalendar() {
-          var year = viewDate.getFullYear();
-          var month = viewDate.getMonth();
-          var firstDay = new Date(year, month, 1).getDay();
-          var daysInMonth = new Date(year, month + 1, 0).getDate();
-          heading.textContent = viewDate.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
-          grid.innerHTML = '';
-
-          for (var index = 0; index < firstDay; index += 1) {
-            var blank = document.createElement('span');
-            blank.className = 'events-calendar__day events-calendar__day--empty';
-            blank.setAttribute('aria-hidden', 'true');
-            grid.appendChild(blank);
-          }
-
-          for (var day = 1; day <= daysInMonth; day += 1) {
-            var date = new Date(year, month, day);
-            var dateKey = formatDate(date);
-            var button = document.createElement('button');
-            button.type = 'button';
-            button.className = 'events-calendar__day';
-            button.dataset.date = dateKey;
-            button.setAttribute('role', 'gridcell');
-            button.setAttribute('aria-label', date.toLocaleDateString(undefined, { dateStyle: 'long' }));
-            button.innerHTML = '<span>' + day + '</span>' + (events[dateKey] && events[dateKey].length ? '<i aria-label="Has events">' + events[dateKey].length + '</i>' : '');
-            if (dateKey === selectedDate) button.classList.add('is-selected');
-            if (dateKey === formatDate(today)) button.classList.add('is-today');
-            button.addEventListener('click', function () {
-              selectedDate = this.dataset.date;
-              renderCalendar();
-              renderDetails();
-            });
-            grid.appendChild(button);
-          }
+        function formatDateRange(startDate, endDate) {
+          if (!endDate || startDate === endDate) return formatDate(startDate);
+          return formatDate(startDate) + ' - ' + formatDate(endDate);
         }
 
-        function renderDetails() {
-          var date = new Date(selectedDate + 'T12:00:00');
-          selectedDateLabel.textContent = date.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
-          var dayEvents = events[selectedDate] || [];
-          eventList.innerHTML = dayEvents.length ? dayEvents.map(function (event) {
-            return '<article class="events-calendar__event"><h3>' + escapeHtml(event.title) + '</h3>' + (event.description ? '<p>' + escapeHtml(event.description) + '</p>' : '') + (event.flyer ? '<img src="' + escapeHtml(event.flyer) + '" alt="Flyer for ' + escapeHtml(event.title) + '">' : '') + '</article>';
-          }).join('') : '<p class="events-calendar__empty">No events planned for this day.</p>';
+        function addText(parent, tagName, text, className) {
+          var element = document.createElement(tagName);
+          element.textContent = text;
+          if (className) element.className = className;
+          parent.appendChild(element);
+          return element;
         }
 
-        root.querySelectorAll('[data-calendar-event]').forEach(function (eventNode) {
-          var event = {
-            date: eventNode.dataset.date,
-            title: eventNode.dataset.title,
-            description: eventNode.dataset.description,
-            flyer: eventNode.dataset.flyer
-          };
-          if (!event.date || !event.title) return;
-          if (!events[event.date]) events[event.date] = [];
-          events[event.date].push(event);
+        var events = Array.from(root.querySelectorAll('[data-calendar-event]')).map(function (eventNode) {
+          return eventNode.dataset;
+        }).filter(function (event) {
+          var eventEndDate = event.endDate || event.startDate;
+          return event.startDate && event.title && new Date(eventEndDate + 'T12:00:00') >= today;
+        }).sort(function (first, second) {
+          return first.startDate.localeCompare(second.startDate);
         });
 
-        root.querySelector('[data-calendar-previous]').addEventListener('click', function () {
-          viewDate.setMonth(viewDate.getMonth() - 1); renderCalendar();
-        });
-        root.querySelector('[data-calendar-next]').addEventListener('click', function () {
-          viewDate.setMonth(viewDate.getMonth() + 1); renderCalendar();
+        events.forEach(function (event) {
+          var article = document.createElement('article');
+          article.className = 'events-upcoming__event' + (event.flyer ? '' : ' events-upcoming__event--no-flyer');
+
+          if (event.flyer) {
+            var flyerButton = document.createElement('button');
+            flyerButton.className = 'events-upcoming__flyer';
+            flyerButton.type = 'button';
+            flyerButton.setAttribute('aria-label', 'Enlarge flyer for ' + event.title);
+            flyerButton.dataset.flyer = event.flyer;
+            flyerButton.dataset.title = event.title;
+            var thumbnail = document.createElement('img');
+            thumbnail.src = event.flyer;
+            thumbnail.alt = 'Flyer for ' + event.title;
+            flyerButton.appendChild(thumbnail);
+            article.appendChild(flyerButton);
+          }
+
+          var details = document.createElement('div');
+          details.className = 'events-upcoming__details';
+          addText(details, 'time', formatDateRange(event.startDate, event.endDate), 'events-upcoming__date');
+          addText(details, 'h3', event.title, 'events-upcoming__title');
+          if (event.description) addText(details, 'p', event.description, 'events-upcoming__description');
+          if (event.readMore) {
+            var readMoreLink = document.createElement('a');
+            readMoreLink.className = 'ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1';
+            readMoreLink.href = event.readMore;
+            readMoreLink.textContent = readMoreLabel;
+            details.appendChild(readMoreLink);
+          }
+          article.appendChild(details);
+          eventList.appendChild(article);
         });
 
-        renderCalendar();
-        renderDetails();
+        var lightbox = document.createElement('dialog');
+        lightbox.className = 'events-lightbox';
+        lightbox.innerHTML = '<form method="dialog" class="events-lightbox__toolbar"><button class="events-lightbox__close" aria-label="Close flyer">&times;</button></form><div class="events-lightbox__viewport"><img class="events-lightbox__image" alt=""></div>';
+        document.body.appendChild(lightbox);
+        var lightboxImage = lightbox.querySelector('.events-lightbox__image');
+        var zoom = 1;
+        var offsetX = 0;
+        var offsetY = 0;
+        var dragging = false;
+        var startX = 0;
+        var startY = 0;
+        var activePointers = {};
+        var pinchDistance = 0;
+        var pinchZoom = 1;
+
+        function updateImage() {
+          lightboxImage.style.transform = 'translate(' + offsetX + 'px, ' + offsetY + 'px) scale(' + zoom + ')';
+        }
+
+        function setZoom(value) {
+          zoom = Math.min(5, Math.max(1, value));
+          if (zoom === 1) { offsetX = 0; offsetY = 0; }
+          updateImage();
+        }
+
+        root.addEventListener('click', function (clickEvent) {
+          var flyerButton = clickEvent.target.closest('[data-flyer]');
+          if (!flyerButton) return;
+          lightboxImage.src = flyerButton.dataset.flyer;
+          lightboxImage.alt = 'Flyer for ' + flyerButton.dataset.title;
+          setZoom(1);
+          lightbox.showModal();
+        });
+        lightbox.addEventListener('click', function (clickEvent) {
+          if (clickEvent.target === lightbox) lightbox.close();
+        });
+        lightbox.addEventListener('wheel', function (wheelEvent) {
+          wheelEvent.preventDefault();
+          setZoom(zoom + (wheelEvent.deltaY < 0 ? .25 : -.25));
+        }, { passive: false });
+        lightboxImage.addEventListener('pointerdown', function (pointerEvent) {
+          activePointers[pointerEvent.pointerId] = pointerEvent;
+          if (Object.keys(activePointers).length === 2) {
+            var pointers = Object.values(activePointers);
+            pinchDistance = Math.hypot(pointers[0].clientX - pointers[1].clientX, pointers[0].clientY - pointers[1].clientY);
+            pinchZoom = zoom;
+            dragging = false;
+            return;
+          }
+          dragging = true; startX = pointerEvent.clientX - offsetX; startY = pointerEvent.clientY - offsetY; lightboxImage.setPointerCapture(pointerEvent.pointerId);
+        });
+        lightboxImage.addEventListener('pointermove', function (pointerEvent) {
+          if (activePointers[pointerEvent.pointerId]) activePointers[pointerEvent.pointerId] = pointerEvent;
+          if (Object.keys(activePointers).length === 2) {
+            var pointers = Object.values(activePointers);
+            var currentDistance = Math.hypot(pointers[0].clientX - pointers[1].clientX, pointers[0].clientY - pointers[1].clientY);
+            if (pinchDistance) setZoom(pinchZoom * currentDistance / pinchDistance);
+            return;
+          }
+          if (!dragging || zoom === 1) return;
+          offsetX = pointerEvent.clientX - startX; offsetY = pointerEvent.clientY - startY; updateImage();
+        });
+        lightboxImage.addEventListener('pointerup', function (pointerEvent) {
+          delete activePointers[pointerEvent.pointerId];
+          dragging = false;
+          if (Object.keys(activePointers).length < 2) pinchDistance = 0;
+        });
       }());
     </script>
   {{ end }}
