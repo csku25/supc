@@ -1,5 +1,5 @@
 +++
-title = "Ministerio de Los Ninos"
+title = "Ministerio de Los Niños"
 featured_image = "/img/banners/children_banner.png"
 heading = "‎"
 +++
