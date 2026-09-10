@@ -9,4 +9,5 @@ unsafe = true
 hardWraps = true
 
 [params]
+favicon = "img/fire.png"
 facebook_url = "https://www.facebook.com/supcreading/"
