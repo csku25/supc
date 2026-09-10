@@ -4,6 +4,7 @@ weight = 1
 title = "Spanish United Pentecostal Church"
 
 [params]
+  browser_title = "SUPC de Reading"
   site_logo = "img/Logo_SPA_clear.png"
   ananke.custom_css = ["css/index.css", "css/nav.css", "css/index_mobile.css", "css/404.css"]
 
