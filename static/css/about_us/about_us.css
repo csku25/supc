@@ -99,12 +99,6 @@ body.section-about_us main > article > section {
     padding-bottom: 0 !important;
 }
 
-.color-section .contact-email,
-.color-section .contact-email:visited {
-    color: #ffffff !important;
-}
-
-
 /* ============================================================
    5. FIXED NAVIGATION
    ============================================================ */
@@ -123,6 +117,11 @@ nav[role="navigation"] {
     padding-top: 0.3rem !important;
     padding-bottom: 0.3rem !important;
 }
+}
+
+.color-section .contact-email,
+.color-section .contact-email:visited {
+    color: #ffffff !important;
 }
 
 
