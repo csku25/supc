@@ -21,7 +21,7 @@ Para proteger nuestro culto en línea, el enlace y la contraseña de nuestra reu
   <textarea maxlength="300" id="message" name="Mensaje" class="w-100 f5 pv3 ph3 bg-light-gray bn" placeholder="Mensaje (opcional)" aria-labelledby="message"></textarea>
 
   <div class="tc mt4 mb3">
-    <button type="submit" class="hero-button zoom-request-submit">Submit</button>
+    <button type="submit" class="hero-button zoom-request-submit">Enviar</button>
   </div>
 
 </form>
