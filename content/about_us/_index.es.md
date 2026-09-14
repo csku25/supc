@@ -68,7 +68,7 @@ Hermano Luis A. Gonzalez
 Hermano Carlos A. Vega
 
 ## Afiliación
-Estámos afiliados del [Distrito Pennsilvania UPCI](https://padistrictupci.org/) bajo la Sección 1.
+Estámos afiliados al [Distrito de Pennsilvania UPCI](https://padistrictupci.org/) bajo la Sección 1.
 
 
 <div class="color-section">
