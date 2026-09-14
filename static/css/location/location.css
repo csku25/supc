@@ -127,6 +127,6 @@ nav[role="navigation"] {
 
 @media (max-width: 767px) {
     header.cover .tc-l h2 {
-        font-weight: 500 !important;
+        font-weight: 600 !important;
     }
 }
