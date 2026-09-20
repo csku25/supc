@@ -1,3 +1,14 @@
+# example for prayer week page, add to index pages
+{{< event
+	start_date="2026-09-14"
+	end_date="2026-09-18"
+	title="Prayer Week"
+	description="Join us everyday at 7PM in prayer and fasting for our prayer purposes."
+	flyer="/img/events/prayer_week.png"
+	read_more="/events/prayer_week/"
+>}}
+
+# prayer_week.md, just add the page under events dir
 +++
 title = "Propósitos/Purposes"
 featured_image = "/img/banners/church.png"
