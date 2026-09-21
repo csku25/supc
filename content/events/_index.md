@@ -12,7 +12,7 @@ featured_image = "/img/banners/church.png"
 
 {{< event
 	start_date="2026-10-25"
-	title="PA District UPCI - Section 1 Rally Point"
-	description="UPCI Event - This is a time for all of Section 1 churches to unite together for anointed preaching, worship and fellowship."
+	title="Section 1 Rally Point"
+	description="PA District UPCI Event - This is a time for all of Section 1 churches to unite together for anointed preaching, worship and fellowship."
 	flyer="/img/events/rally.PNG"
 >}}

@@ -12,7 +12,7 @@ featured_image = "/img/banners/church.png"
 
 {{< event
 	start_date="2026-10-25"
-	title="Distrito de Pennsilvania UPCI - Sección 1 Rally Point"
-	description="Evento de UPCI - Este es un momento para que todas las iglesias de la Sección 1 se unan para la predicación ungida, el culto y la comunión."
+	title="Sección 1 Rally Point"
+	description="Evento de Distrito de Pennsilvania UPCI - Este es un momento para que todas las iglesias de la Sección 1 se unan para la predicación ungida, el culto y la comunión."
 	flyer="/img/events/rally.PNG"
 >}}
