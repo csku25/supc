@@ -114,6 +114,11 @@ nav[role="navigation"] {
 }
 }
 
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+
 .events-upcoming {
     max-width: 980px;
     margin: 0 auto;
@@ -184,6 +189,11 @@ nav[role="navigation"] {
     text-align: center;
 }
 
+
+/* ============================================================
+   EVENT DETAIL
+   ============================================================ */
+
 .events-detail {
     max-width: 980px;
     margin: 0 auto;
@@ -195,12 +205,32 @@ nav[role="navigation"] {
     font-size: 1.1rem;
 }
 
+
+/* ============================================================
+   EVENT LIGHTBOX
+   ============================================================ */
+
+/*
+   IMPORTANT:
+   The lightbox now sizes itself around the image instead of
+   automatically becoming almost the full width of the monitor.
+
+   The image can never exceed 94vw or 90vh, so the entire flyer
+   remains visible on both wide desktop monitors and mobile.
+*/
+
 .events-lightbox {
-    width: min(94vw, 1100px);
-    height: min(94vh, 900px);
+    width: fit-content;
+    height: fit-content;
+
+    max-width: 94vw;
+    max-height: 94vh;
+
     padding: 0;
     border: 0;
+
     background: #18252b;
+
     overflow: hidden;
 }
 
@@ -208,24 +238,37 @@ nav[role="navigation"] {
     background: rgba(8, 16, 19, .88);
 }
 
+
+/*
+   Close button.
+*/
 .events-lightbox__toolbar {
     display: flex;
     justify-content: flex-end;
     gap: .4rem;
+
     padding: .6rem;
+
     position: absolute;
+
     top: 0;
     right: 0;
-    z-index: 1;
+
+    z-index: 10;
 }
 
 .events-lightbox__toolbar button {
     min-width: 2.25rem;
     min-height: 2.25rem;
+
     border: 0;
+
     background: rgba(255, 255, 255, .9);
+
     color: #18252b;
+
     cursor: pointer;
+
     font-weight: 700;
 }
 
@@ -233,29 +276,56 @@ nav[role="navigation"] {
     font-size: 1.5rem;
 }
 
+
+/*
+   The viewport no longer forces itself to the full width
+   and height of the monitor.
+
+   It wraps the image instead.
+*/
 .events-lightbox__viewport {
-    width: 100%;
-    height: 100%;
+    width: fit-content;
+    height: fit-content;
+
+    max-width: 94vw;
+    max-height: 94vh;
+
     overflow: auto;
+
     display: grid;
     place-items: center;
+
     touch-action: none;
 }
 
+
 /*
-   Keep the full image visible on wide desktop screens.
-   width/height stay automatic so square flyers don't
-   expand unnecessarily toward the monitor's full width.
+   KEY FIX:
+
+   The image keeps its natural proportions and dimensions.
+
+   It will grow only until it reaches the available screen
+   height/width. A portrait or square flyer will therefore
+   remain completely visible instead of becoming enormous
+   simply because the monitor is very wide.
 */
 .events-lightbox__image {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    display: block;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 94vw !important;
+    max-height: 90vh !important;
+
     object-fit: contain;
+
     transform-origin: center;
+
     cursor: grab;
+
     user-select: none;
+
     touch-action: none;
 }
 
@@ -264,7 +334,12 @@ nav[role="navigation"] {
 }
 
 
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
 @media (max-width: 600px) {
+
     .events-upcoming__event {
         grid-template-columns: 100px 1fr;
         gap: 1rem;
@@ -272,5 +347,24 @@ nav[role="navigation"] {
 
     .events-upcoming__flyer img {
         height: 130px;
+    }
+
+    /*
+       On mobile, allow the flyer to use the available
+       screen height while keeping the entire image visible.
+    */
+    .events-lightbox {
+        max-width: 96vw;
+        max-height: 94vh;
+    }
+
+    .events-lightbox__viewport {
+        max-width: 96vw;
+        max-height: 94vh;
+    }
+
+    .events-lightbox__image {
+        max-width: 96vw !important;
+        max-height: 90vh !important;
     }
 }
