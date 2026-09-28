@@ -1,0 +1,257 @@
+{{- $id := printf "carousel-%d" .Ordinal -}}
+{{- $images := slice -}}
+{{- with .Get "images" -}}
+  {{- range split . "|" -}}
+    {{- $src := strings.TrimSpace . -}}
+    {{- if $src -}}
+      {{- $images = $images | append $src -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $images -}}
+  {{- range split (.Inner | plainify) "\n" -}}
+    {{- $src := strings.TrimSpace . -}}
+    {{- if $src -}}
+      {{- $images = $images | append $src -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="site-carousel" id="{{ $id }}" data-carousel>
+  {{- if gt (len $images) 0 -}}
+    <div class="site-carousel__viewport">
+      {{- range $index, $src := $images -}}
+        {{- $resolvedSrc := $src -}}
+        {{- if and (hasPrefix $src "/") (not (hasPrefix $src "//")) -}}
+          {{- $resolvedSrc = strings.TrimPrefix "/" $src | relURL -}}
+        {{- end -}}
+        <img
+          class="site-carousel__slide{{ if eq $index 0 }} is-active{{ end }}"
+          src="{{ $resolvedSrc }}"
+          alt="{{ $.Get "alt" | default (printf "Sunday School photo %d" (add $index 1)) }}"
+          loading="{{ if eq $index 0 }}eager{{ else }}lazy{{ end }}"
+          decoding="async"
+          data-carousel-slide="{{ $index }}"
+        >
+      {{- end -}}
+
+      {{- if gt (len $images) 1 -}}
+        <button class="site-carousel__button site-carousel__button--previous" type="button" aria-label="Previous photo" data-carousel-prev>
+          <span aria-hidden="true">&#10094;</span>
+        </button>
+        <button class="site-carousel__button site-carousel__button--next" type="button" aria-label="Next photo" data-carousel-next>
+          <span aria-hidden="true">&#10095;</span>
+        </button>
+      {{- end -}}
+    </div>
+
+    {{- if gt (len $images) 1 -}}
+      <div class="site-carousel__dots" role="tablist" aria-label="Choose a photo">
+        {{- range $index, $_ := $images -}}
+          <button
+            class="site-carousel__dot{{ if eq $index 0 }} is-active{{ end }}"
+            type="button"
+            role="tab"
+            aria-label="Show photo {{ add $index 1 }}"
+            aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+            data-carousel-dot="{{ $index }}"
+          ></button>
+        {{- end -}}
+      </div>
+    {{- end -}}
+  {{- else -}}
+    <div class="site-carousel__empty">
+      <div class="site-carousel__empty-icon" aria-hidden="true">📷</div>
+      <p>Add Sunday School photos to this carousel.</p>
+      <code>{{ printf "{{< carousel images=\"/img/sunday_school/01.jpg|/img/sunday_school/02.jpg\" >}}" }}</code>
+    </div>
+  {{- end -}}
+</div>
+
+<style>
+  .site-carousel {
+    width: 100%;
+    margin: 2.75rem auto 3rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .site-carousel__viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: #000;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 16 / 10;
+  }
+
+  .site-carousel__slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease;
+    user-select: none;
+  }
+
+  .site-carousel__slide.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .site-carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.2s ease;
+    z-index: 2;
+  }
+
+  .site-carousel__button:hover,
+  .site-carousel__button:focus-visible {
+    background: rgba(0, 0, 0, 0.78);
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .site-carousel__button:focus-visible,
+  .site-carousel__dot:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  .site-carousel__button--previous { left: 1rem; }
+  .site-carousel__button--next { right: 1rem; }
+
+  .site-carousel__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+  }
+
+  .site-carousel__dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+  }
+
+  .site-carousel__dot.is-active {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.18);
+  }
+
+  .site-carousel__empty {
+    min-height: 15rem;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    border: 2px dashed rgba(0, 0, 0, 0.22);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .site-carousel__empty-icon {
+    font-size: 2.25rem;
+  }
+
+  .site-carousel__empty p {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .site-carousel__empty code {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.08);
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  @media (max-width: 600px) {
+    .site-carousel {
+      margin-top: 2rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .site-carousel__viewport {
+      aspect-ratio: 4 / 3;
+      border-radius: 0.75rem;
+    }
+
+    .site-carousel__button {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+
+    .site-carousel__button--previous { left: 0.65rem; }
+    .site-carousel__button--next { right: 0.65rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .site-carousel__slide,
+    .site-carousel__button {
+      transition: none;
+    }
+  }
+</style>
+
+{{- if gt (len $images) 1 -}}
+<script>
+  (() => {
+    const carousel = document.getElementById('{{ $id }}');
+    if (!carousel || carousel.dataset.carouselInitialized === 'true') return;
+    carousel.dataset.carouselInitialized = 'true';
+
+    const slides = [...carousel.querySelectorAll('[data-carousel-slide]')];
+    const dots = [...carousel.querySelectorAll('[data-carousel-dot]')];
+    const previous = carousel.querySelector('[data-carousel-prev]');
+    const next = carousel.querySelector('[data-carousel-next]');
+    let current = 0;
+
+    const show = (index) => {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+      dots.forEach((dot, i) => {
+        const active = i === current;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+    };
+
+    previous?.addEventListener('click', () => show(current - 1));
+    next?.addEventListener('click', () => show(current + 1));
+    dots.forEach((dot) => dot.addEventListener('click', () => show(Number(dot.dataset.carouselDot))));
+
+    carousel.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') show(current - 1);
+      if (event.key === 'ArrowRight') show(current + 1);
+    });
+  })();
+</script>
+{{- end -}}

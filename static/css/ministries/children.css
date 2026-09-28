@@ -114,6 +114,73 @@ nav[role="navigation"] {
 }
 }
 
+/* ============================================================
+   CHILDREN'S MINISTRY WALLPAPER
+   ============================================================ */
+
+/*
+   Let the wallpaper span the entire page width, while keeping the
+   article's text in the same centered reading area it had before.
+
+   The source image is 1080 x 1293, so its height is allowed to grow
+   naturally from the page width.  This keeps the image's original
+   aspect ratio instead of stretching it to the article's content height.
+   The article therefore grows to the image's natural displayed height
+   and can grow farther when additional Markdown content needs more room.
+*/
+main > article.page-children {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+
+    background-image: url('/img/children_background.png') !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important;
+    background-attachment: scroll !important;
+
+    /* Keep the full 1080 x 1293 image visible at its natural aspect ratio. */
+    aspect-ratio: 1080 / 1293;
+
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* The page header is intentionally blank on this page. Removing it puts
+   the Markdown content at the very top of the wallpaper. */
+main > article.page-children > header {
+    display: none !important;
+}
+
+/* Keep normal Markdown in a narrower, centered reading column. */
+main > article.page-children > .nested-copy-line-height {
+    width: min(100% - 2rem, 32rem) !important;
+    max-width: 32rem !important;
+    margin: 0 auto !important;
+    padding: 5rem 0 12rem !important;
+    box-sizing: border-box !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif !important;
+    text-align: center !important;
+}
+
+@media (max-width: 767px) {
+    main > article.page-children > .nested-copy-line-height {
+        width: min(100% - 2rem, 25rem) !important;
+        max-width: 25rem !important;
+    }
+}
+
+main > article.page-children .children-text-section {
+    margin-bottom: 2rem;
+    font-style: italic;
+}
 
 /* ============================================================
    6. HERO TITLE FONT
