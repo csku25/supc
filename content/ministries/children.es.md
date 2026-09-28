@@ -24,4 +24,4 @@ heading = "‎"
 /img/sunday_school/IMG_E1750.JPG
 {{< /carousel >}}
 
-Directores de Escuela Dominical: Alfonso & Linda Osorio
+#### <br>Directores de Escuela Dominical: Alfonso & Linda Osorio
