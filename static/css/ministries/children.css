@@ -135,7 +135,7 @@ main > article.page-children {
     padding: 0 !important;
     box-sizing: border-box !important;
 
-    background-image: url('/img/children_background.png') !important;
+    background-image: url('/img/sunday_school/children_background.png') !important;
     background-position: top center !important;
     background-repeat: no-repeat !important;
     background-size: 100% auto !important;
@@ -171,6 +171,10 @@ main > article.page-children > .nested-copy-line-height {
 }
 
 @media (max-width: 767px) {
+    main > article.page-children {
+        background-image: url('/img/sunday_school/mob_children_background.png') !important;
+    }
+
     main > article.page-children > .nested-copy-line-height {
         width: min(100% - 2rem, 25rem) !important;
         max-width: 25rem !important;
