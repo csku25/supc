@@ -2,6 +2,7 @@
 title = "Children's Ministry"
 featured_image = "/img/banners/children_banner.png"
 heading = "‎"
+summary = "Sunday School Directors: Alfonso & Linda Osorio"
 +++
 
 ## Welcome to SUPC Children's Ministry, a place where children in Pre-K through 6th grade learn the Bible through fun stories to help them build a lifelong spiritual foundation.

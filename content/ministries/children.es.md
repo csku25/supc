@@ -2,6 +2,7 @@
 title = "Ministerio de Los Niños"
 featured_image = "/img/banners/children_banner.png"
 heading = "‎"
+summary = "Directores de Escuela Dominical: Alfonso & Linda Osorio"
 +++
 
 ## Bienvenidos al Ministerio de Niños SUPC, un lugar donde niños desde Pre-K hasta 6º de primaria aprenden la Biblia a través de historias divertidas para ayudarles a construir una base espiritual de por vida.
